@@ -11,7 +11,7 @@ dir_path = join(dirname(__file__), 'template')
 
 class MyHandler(RequestHandler):
     def app_name(self):
-        return 'neuron-ism'
+        return 'neuronism2'
 
     def mail_from_admin(self, to, subject, body):
         try:
