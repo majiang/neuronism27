@@ -3,7 +3,6 @@ from scoredata import QueueScore, QueueStopper
 from StringIO import StringIO
 from score import get_players, get_points
 from dbmanager import add_game
-from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext.webapp import WSGIApplication
 from datetime import datetime, timedelta
 from util import long_ago
@@ -68,6 +67,6 @@ class AdminContinueBatchPage(MyHandler):
         logging.debug('input %d games of %s for %d. current score in the queue continues.' % (i, date, bid))
         self.response.out.write('input %d games of %s for %d. current score in the queue continues.' % (i, date, bid))
 
-run_wsgi_app(WSGIApplication([
+app = WSGIApplication([
     ('/admin/continue_batch', AdminContinueBatchPage)
-], debug=True))
+], debug=True)

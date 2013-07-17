@@ -1,8 +1,6 @@
 from google.appengine.ext.webapp import WSGIApplication
-from google.appengine.ext.webapp.util import run_wsgi_app
 
 from index import IndexPage
-from admin import AdminPage
 from master_prebranches import MasterPrebranchesPage
 from master_branches import MasterBranchesPage, BranchSelfStatsPage
 from branch_previewers import BranchPreviewersPage
@@ -18,7 +16,7 @@ from branch_score_view import BranchScoreViewPage
 from branch_player import BranchPlayerPage
 from branch_rating_ranking import BranchRatingRankingPage
 from branch_frequent_query import BranchFrequentQueryPage
-from branch_report import BranchReportPage, AdminAutoReportPage
+from branch_report import BranchReportPage
 
 from branch_player_active import BranchPlayerActivePage
 from branch_player_inactive import BranchPlayerInactivePage
@@ -28,8 +26,7 @@ from viewer_score_default import ViewerScoreDefaultPage
 from viewer_support import ViewerSupportPage
 from viewer_rating_ranking import ViewerRatingRankingPage
 
-if __name__ == '__main__':
-    run_wsgi_app(WSGIApplication([
+app = WSGIApplication([
         ('/admin/report.*', AdminAutoReportPage),
         ('/admin.*', AdminPage),
         ('/master/prebranch.*', MasterPrebranchesPage),
@@ -54,4 +51,4 @@ if __name__ == '__main__':
         ('/viewer/score.*', ViewerScoreDefaultPage),
         ('/viewer/support.*', ViewerSupportPage),
         ('/viewer/rating.*', ViewerRatingRankingPage),
-    ] + [('/.*', IndexPage)], debug=True))
+    ] + [('/.*', IndexPage)], debug=True)

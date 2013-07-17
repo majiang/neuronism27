@@ -1,6 +1,5 @@
 from google.appengine.ext.webapp import RequestHandler
 from scoredata import get_ss
-from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext.webapp import WSGIApplication
 
 class AdminGetSSPage(RequestHandler):
@@ -12,6 +11,6 @@ class AdminGetSSPage(RequestHandler):
             return
         self.response.out.write('Success!')
 
-run_wsgi_app(WSGIApplication([
+app = WSGIApplication([
     ('/admin/get_ss.*', AdminGetSSPage)
-], debug=True))
+], debug=True)

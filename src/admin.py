@@ -1,5 +1,4 @@
 from google.appengine.ext.webapp import WSGIApplication
-from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.api.users import is_current_user_admin
 from myhandler import MyHandler
 from userdata import Master, Branch
@@ -7,6 +6,7 @@ from scoredata import BranchCounter, BranchState, SumScore, Player, QueueStopper
 from google.appengine.api import mail
 import logging
 from branch_player import MatchScore, WholeScore
+from branch_report import AdminAutoReportPage
 
 class PlayerNotFoundException(Exception):
     def __init__(self, bid, pid):
@@ -180,7 +180,7 @@ class AdminPage(MyHandler):
             Master(user=user, uid=user.user_id()).put()
         self.redirect('/')
 
-if __name__ == '__main__':
-    run_wsgi_app(WSGIApplication([
-      ('/admin.*', AdminPage),
-    ], debug=True))
+app = WSGIApplication([
+      ('/admin/report.*', AdminAutoReportPage),
+      ('/admin.*', AdminPage)
+    ], debug=True)
