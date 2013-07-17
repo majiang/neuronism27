@@ -94,13 +94,14 @@ class AdminAutoReportPage(MyHandler):
         sender = branch.name + ' <admin@%s.appspotmail.com>' % self.app_name()
         neuron = 'Neuron Backup <neuron.honbu+backup@gmail.com>'
         stneuron = 'Neuron Central <stneuron@nifty.com>'
-        #developer = 'r.97all@gmail.com'
+        developer = 'r.97all@gmail.com' ##
         subject = 'NeuronISM: %d-%d score of %s' % (year, month, branch.name)
         body = 'see attachment.'
         attachments = [('%d-%d-%s.csv' % (year, month, branch.name), attatchment)]
         mail.send_mail(
                 sender=sender,
-                to=[branch.user.email(), neuron, stneuron],
+                #to=[branch.user.email(), neuron, stneuron],
+                to=[developer],
                 subject=subject,
                 body=body,
                 attachments=attachments

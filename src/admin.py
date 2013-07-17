@@ -45,9 +45,8 @@ class AdminPage(MyHandler):
         if self.get_str('announce') != 'body':
             return self.redirect('/')
         try:
-            addresses = [branch.user.email() for branch in Branch.all().filter('mstr =', False)] + ['stneuron@nifty.com', 'neuron-ikeya@i.softbank.jp', 'neuron.honbu@gmail.com']
-            for address in addresses:
-                self.mail_from_admin(address, 'NeuronISM: ' + self.get_str('subject'), self.get_str('body'))
+            addresses = [branch.user.email() for branch in Branch.all().filter('mstr =', False)] #+ ['stneuron@nifty.com', 'neuron-ikeya@i.softbank.jp', 'neuron.honbu@gmail.com']
+            self.mail_from_admin(addresses, 'NeuronISM: ' + self.get_str('subject'), self.get_str('body'))
         except:
             self.write_raw('fail to email: %s' % addresses)
         else:
