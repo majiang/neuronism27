@@ -1,7 +1,8 @@
-application: neuron-ism
-version: 3
-runtime: python
+application: neuronism2
+version: 1
+runtime: python27
 api_version: 1
+threadsafe: true
 
 handlers:
 
@@ -13,22 +14,14 @@ handlers:
 - url: /static
   static_dir: static_html
 
-#- url: /admin/get_ss.*
-#  script: admin_get_ss.py
-#  login: admin
-
 - url: /admin/continue_batch.*
-  script: admin_continue_batch.py
-  login: admin
-
-- url: /admin/report.*
-  script: main.py
+  script: admin_continue_batch.app
   login: admin
 
 - url: /admin.*
-  script: admin.py
+  script: admin.app
   login: admin
 
 - url: /.*
-  script: main.py
+  script: main.app
   login: required
