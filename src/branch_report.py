@@ -91,7 +91,7 @@ class AdminAutoReportPage(MyHandler):
                 r.rp_gain, r.rank[0], r.rank[1], r.rank[2], r.rank[3],
                 r.finish_date, r.games, r.rating_bef, r.rating_aft
             )
-        sender = branch.name + ' <admin@neuron-ism.appspotmail.com>'
+        sender = branch.name + ' <admin@%s.appspotmail.com>' % self.app_name()
         neuron = 'Neuron Backup <neuron.honbu+backup@gmail.com>'
         stneuron = 'Neuron Central <stneuron@nifty.com>'
         #developer = 'r.97all@gmail.com'

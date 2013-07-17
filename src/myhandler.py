@@ -10,10 +10,12 @@ from userdata import Master, Branch, Viewer
 dir_path = join(dirname(__file__), 'template')
 
 class MyHandler(RequestHandler):
+    def app_name(self):
+        return 'neuron-ism'
 
     def mail_from_admin(self, to, subject, body):
         try:
-            mail.send_mail('admin@neuron-ism.appspotmail.com', to, subject, body)
+            mail.send_mail('admin@%s.appspotmail.com' % self.app_name(), to, subject, body)
         except:
             logging.warning('failed to send e-mail')
         else:
