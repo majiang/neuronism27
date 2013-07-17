@@ -27,8 +27,6 @@ from viewer_support import ViewerSupportPage
 from viewer_rating_ranking import ViewerRatingRankingPage
 
 app = WSGIApplication([
-        ('/admin/report.*', AdminAutoReportPage),
-        ('/admin.*', AdminPage),
         ('/master/prebranch.*', MasterPrebranchesPage),
         ('/master/branch.*', MasterBranchesPage),
         ('/branch/previewer.*', BranchPreviewersPage),
