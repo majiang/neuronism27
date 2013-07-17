@@ -1,0 +1,21 @@
+cron:
+- description: get score from the queue and put into the system.
+  url: /admin/continue_batch
+  schedule: every 20 minutes synchronized
+# 300 games per 30 minutes = 14.4kGPD
+# 350 games per 24 minutes = 21kGPD
+# 300 games per 24 minutes = 18kGPD
+# 300 games per 10 minutes = 43.2kGPD
+# 300 games per 6 minutes = 72kGPD
+
+#- description: get score from the queue and put into the system. (09:00)
+#  url: /admin/continue_batch
+#  schedule: every day 00:00
+
+#- description: restart batch. just before quota reset.
+#  url: /admin?start_all=yes
+#  schedule: every day 07:58
+
+- description: monthly report.
+  url: /admin/report
+  schedule: 28 of month 23:00

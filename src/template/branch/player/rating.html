@@ -1,0 +1,21 @@
+{% extends "../../base.html" %}
+{% block title %}Rating Ranking for {{ bname }}{% endblock %}
+{% block content %}
+<table>
+  <caption>Rating Ranking for {{ bname }} (played {{ games }} games or more)</caption>
+  <thead><tr>
+    <th>rank</th>
+    <th>ID</th>
+    <th>curR</th>
+    <th>#G</th>
+    <th class="last-column">last</th>
+  </tr></thead>
+  <tbody>{% for player in players %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+    <td>{{ forloop.counter }}</td>
+    <td><a href="/branch/player?pid={{ player.pid }}">{{ player.pid }}</a></td>
+    <td style="background-color: {{ player.rating_color }}">{{ player.curR|floatformat:2 }}</td>
+    <td style="background-color: {{ player.played_color }}">{{ player.played }}</td>
+    <td class="last-column">{{ player.last_visit|date:"Y/m/d" }}</td>
+  </tr>{% endfor %}</tbody>
+</table>
+{% endblock %}

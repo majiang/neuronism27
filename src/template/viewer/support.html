@@ -1,0 +1,23 @@
+{% extends "../base.html" %}
+{% block title %}問合せ{% endblock %}
+{% block content %}
+<h1>問合せ</h1>
+<h2>注意事項</h2>
+<ul>
+<li>これは NeuronISM システム管理者への問い合わせ用フォームです。</li>
+<li>まず <a href="/faq.html">FAQ</a> を読み、疑問が解決しない場合のみ問い合わせてください。</li>
+<li>成績の誤りに関しては該当加盟校スタッフへ問い合わせてください。</li>
+<li>問合せ内容のコピーおよび回答は、ログインに使用しているメールアドレス: {{ email }} へ届きます。</li>
+<li><a href="/faq.html">FAQ</a> を読めば解決するような問合せに対しては回答しません。</li>
+<li>問合せを送信するとトップページへ戻りますが、正しく送信はできています。</li>
+<li>件名には問合せ内容を端的に書いてください。(例:「項目『○○』の意味」「読み込みエラー」)</li>
+</ul>
+
+<form action="/viewer/support" method="post">
+	<p>件名: <input type="text" name="subject" size="40" /></p>
+	<p>本文:</p>
+	<p><textarea name="body" rows="20" columns="80"></textarea></p>
+	<p><input type="submit" value="submit"/></p>
+</form>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+application: neuron-ism
+version: 3
+runtime: python
+api_version: 1
+
+handlers:
+
+# CSS
+- url: /css
+  static_dir: css
+
+# HTML
+- url: /static
+  static_dir: static_html
+
+#- url: /admin/get_ss.*
+#  script: admin_get_ss.py
+#  login: admin
+
+- url: /admin/continue_batch.*
+  script: admin_continue_batch.py
+  login: admin
+
+- url: /admin/report.*
+  script: main.py
+  login: admin
+
+- url: /admin.*
+  script: admin.py
+  login: admin
+
+- url: /.*
+  script: main.py
+  login: required

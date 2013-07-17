@@ -1,0 +1,10 @@
+{% extends "../base.html" %}
+{% block title %}Convert old score file{% endblock %}
+{% block content %}
+<h1>Convert old score file</h1>
+<form action="{{ url }}" method="post" enctype="multipart/form-data">
+<p>upload: <input type="file" name="score" />
+<input type="submit" value="submit" />
+</p>
+</form>
+{% endblock %}

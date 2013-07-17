@@ -1,0 +1,78 @@
+body ul
+{
+	margin-left: 4em;
+}
+
+body > p
+{
+	margin-left: 4em;
+}
+
+body form
+{
+	margin-left: 4em;
+}
+
+h1
+{
+	margin-left: 1em;
+}
+
+h2
+{
+	margin-left: 2em;
+}
+
+h3
+{
+	margin-left: 3em;
+}
+
+table
+{
+    border-top: 1px solid #630;
+    border-left: 1px solid #630;
+    margin: 10px;
+    border-spacing: 0;
+    empty-cells: show;
+    table-layout: fixed;
+}
+
+table td
+{
+    border-bottom: 1px dotted #630;
+    border-right: 1px dotted #630;
+    padding: 0.2em 0.5em;
+    text-align: right;
+}
+
+table th
+{
+    background-color: #fcc;
+    padding: 0.2em 0.5em;
+    text-align: center;
+}
+
+table thead tr th
+{
+    border-bottom: 1px solid #630;
+    border-right: 1px dotted #630;
+}
+
+table tr.last-row td
+{
+    border-bottom: 1px solid #630;
+}
+
+table .last-column
+{
+    border-right: 1px double #630;
+}
+
+a.button
+{
+    border: 2px outset #999;
+    text-decoration: none;
+    background-color: #ccc;
+    color: #000;
+}

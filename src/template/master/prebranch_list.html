@@ -1,0 +1,27 @@
+{% extends "../table.html" %}
+
+{% block title %}Pre-Branch List{% endblock %}
+
+{% block caption %}Pre-Branch List{% endblock %}
+
+{% block thead %}
+		<tr>
+			<th>name</th>
+			<th>nickname</th>
+			<th>e-mail</th>
+			<th class="last-column">id</th>
+			<th>accept</th>
+			<th class="last-column">reject</th>
+		</tr>
+{% endblock %}
+
+{% block tbody %}{% for prebranch in prebranches %}
+		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+			<td>{{ prebranch.name }}</td>
+			<td>{{ prebranch.user.nickname }}</td>
+			<td>{{ prebranch.user.email }}</td>
+			<td class="last-column">{{ prebranch.bid }}</td>
+			<td><a href="/master/prebranch?action=accept&id={{ prebranch.key.id }}">accept</a></td>
+			<td><a href="/master/prebranch?action=reject&id={{ prebranch.key.id }}">reject</a></td>
+		</tr>{% endfor %}
+{% endblock %}

@@ -1,0 +1,17 @@
+
+<hr />
+
+<h2>index for system master</h2>
+
+<ul>
+  <li>System status: {% if unp %}Warning: {{ unp }} scores remaining in the queue. Any operation allowed, but incomplete output.{% else %}OK. Data stored in the application is up-to-date.{% endif %}</li>
+  <li><a href="/master/branch/action">represent a branch</a></li>
+  <li><a href="/master/prebranch">branch requests</a></li>
+</ul>
+
+<p>Admin only, not for Honbu:</p>
+<ul>
+  <li><a href="/admin/?announce=yes">Compose announcement</a></li>
+  <li><a href="/admin/?stop_all=yes">Stop queue</a></li>
+  <li><a href="/admin/?start_all=yes">Start queue</a></li>
+</ul>

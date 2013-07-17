@@ -1,0 +1,26 @@
+{% extends "../../base.html" %}
+{% block title %}upload score preview{% endblock %}
+{% block content %}
+<p>すでに入力処理済のデータは <strong>{{ input_date|date:"Y/m/d" }}</strong> までです。{% if remain_queue %}キューにも未処理のゲームが残っています。{% endif %}</p>
+<h2>{{ bname }}: スコア確認</h2>
+<h3>概要</h3>
+<dl><dt>ゲーム日付
+</dt><dd><span style="font-weight: bold;{% if min_date_error %} background-color: #ff0000;{% endif %}">from {{ min_date|date:"Y/m/d" }}</span> <span style="font-weight: bold; {% if max_date_error %} background-color: #ff0000;{% endif %}">to {{ max_date|date:"Y/m/d" }}</span>
+</dd><dt>入力ゲーム数
+</dt><dd>{{ lines }}
+</dd><dt>正常ゲーム数
+</dt><dd>{{ correct }}
+</dd><dt>無視ゲーム数
+</dt><dd><strong>{{ error_count }}</strong>
+</dd><dt>エラー率
+</dt><dd>{{ error_perc }}
+</dd></dl>
+<h3>Confirm or Cancel</h3>
+<p>エラーの表示がある場合は、必ずエラーの内容を読み理解するまでは OK を押してアップロードを確定しないでください。</p>
+<p><a class="button" href="/branch/score/confirm?key={{ key }}">OK</a> / <a class="button" href="/branch/score/cancel?key={{ key }}">キャンセル</a></p>
+<h3>Error details</h3>
+<p>以下に表示された行はエラーのため無視されます。</p>
+<ul>{% for error in errors %}
+<li>{{ error }}</li>
+{% endfor %}</ul>
+{% endblock %}

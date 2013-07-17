@@ -1,0 +1,18 @@
+{% extends "table.html" %}
+
+{% block title %}{% endblock %}
+
+{% block caption %}{% endblock %}
+
+{% block thead %}
+		<tr>
+<th></th>
+		</tr>
+{% endblock %}
+
+{% block tbody %}
+{% for  in  %}
+		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+<td>{{ . }}</td>
+		</tr>{% endfor %}
+{% endblock %}

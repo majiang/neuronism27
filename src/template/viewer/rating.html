@@ -1,0 +1,15 @@
+{% extends "../base.html" %}
+{% block title %}Rating Ranking for {{ bname }}{% endblock %}
+{% block content %}
+<table>
+  <caption>Rating Ranking for {{ bname }} (played {{ games }} games or more)</caption>
+  <thead><tr>
+    <th>rank</th>
+    <th class="last-column">R</th>
+  </tr></thead>
+  <tbody>{% for player in players %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+    <td>{{ forloop.counter }}</td>
+    <td class="last-column" style="background-color: {{ player.rating_color }}">{{ player.curR|floatformat:2 }}</td>
+  </tr>{% endfor %}</tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "../base.html" %}
+{% block title %}Detail Statistics of {{ bname }}{% endblock %}
+{% block addheader %}
+<!--script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages: ["corechart"]});
+function drawgraph()
+{
+    var datatable = new google.visualization.DataTable();
+    datatable.addColumn('date', 'Date');
+    datatable.addColumn('number', 'Games');{% for stat in games_stat %}
+    datatable.addRow([new Date({{ stat.date.year }}, {{ stat.date.month|add:"-1" }}, {{ stat.date.day }}), {{ stat.games }}]);{% endfor %}
+    var options = {title: 'Games statistics of {{ bname }}: {{ min_date }} - {{ max_date }}'};
+    var chart = new google.visualization.LineChart(document.getElementById('graph_area'));
+    chart.draw(datatable, options);
+}
+</script-->
+{% endblock %}
+{% block content %}
+<h1>Branch Statistics of {{ bname }}</h1>
+
+{% for statistics in stats %}
+<h2>Statistics for <span style="color: #{{ statistics.color }}">{{ statistics.dow }}</h2>
+<dl><dt>average games</dt><dd>{{ statistics.average }} &#177; {{ statistics.stdev }}</dd></dl>
+<table><caption>games statistics</caption><thead>
+  <tr>
+    <th>Date</th>
+    <th class="last-column">#G</th>
+    <th class="last-column">visualize</th>
+  </tr>
+</thead><tbody>
+{% for stat in statistics.stats %}
+  <tr{% if forloop.last %} class="last-row"{% endif %}>
+    <td>{% if stat.date %}{{ stat.date }}{% else %}{{ stat.from_date }} - {{ stat.to_date }}{% endif %}</td>
+    <td class="last-column">{{ stat.games }}</td>
+    <td class="last-column" style="text-align: left;">{{ stat.visualize }}</td>
+  </tr>{% endfor %}
+</tbody></table>
+{% endfor %}
+
+<!--div id="graph_area" style="width: 800px; height: 600px; border: 1px #000;"></div>
+<script type="text/javascript">drawgraph();</script-->
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "../base.html" %}
+{% block title %}guest index{% endblock %}
+
+{% block content %}
+<h1>guest index: NeuronISM</h1>
+
+<h2>register as viewer</h2>
+<form action="/" method="get">
+<p>select branch:
+<select name="branch_id">{% for branch in branches %}
+	<option value="{{ branch.key.id }}">{{ branch.name }}</option>{% endfor %}
+</select></p>
+<p>input player id: <input type="text" name="player_id" /></p>
+<p><input type="hidden" name="action" value="register_viewer" /><input type="submit" value="submit" /></p>
+</form>
+
+<h2>register as branch</h2>
+<form action="/" method="get">
+<p>input branch name: <input type="text" name="name" /></p>
+<p><input type="hidden" name="action" value="register_branch" /><input type="submit" value="submit" /></p>
+</form>
+{% endblock %}

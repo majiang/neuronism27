@@ -1,0 +1,463 @@
+210.131.1.15 - neuron.kawasaki [13/Nov/2012:03:55:19 -0800] "GET / HTTP/1.1" 200 1190 - "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; GTB7.4; .NET CLR 1.1.4322; .NET4.0C; YTB730)"
+	2:1352807717.593703 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+0.1.0.30 - r.97all [13/Nov/2012:05:13:40 -0800] "POST /temp/convert/error HTTP/1.1" 200 6547 "http://neuron-ism.appspot.com/temp/convert" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352812420.318629 Response written is not UTF-8: 'utf8' codec can't decode byte 0x93 in position 3630: unexpected code byte
+0.1.0.30 - r.97all [13/Nov/2012:05:16:35 -0800] "POST /temp/convert/error HTTP/1.1" 200 4124 "http://neuron-ism.appspot.com/temp/convert" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352812595.542916 Response written is not UTF-8: 'utf8' codec can't decode byte 0x93 in position 1498: unexpected code byte
+210.131.1.25 - r.97all [13/Nov/2012:05:17:50 -0800] "GET /temp/convert/cancel?key=AMIfv96qEeJ0LeN2cgW3bt0cTxO5TtIM0A1rpn3tXs6vJhkII1Ercq5Gkmz3sFeZSiojLegIccbBuVa_YQHxRq8w9qnuVoQih6BYd1EPzdfn8BnEOmo3dOIg8zmiMnq1TmqJHuqwKT2GjoyLfml3XUME5TEPm5FrGQ HTTP/1.1" 500 470 "http://neuron-ism.appspot.com/_ah/upload/AMmfu6YMb9TWW3ba8eKtBA524Ljy8JtPdXUQ1iAdPTP4o7r9GQkNb9lPQbpllTZ5gSHZjw7FZDA9lgARVqlj0ellcWfmlKEWK00UOnvkof6aKIZa9x08BXKr_fErJyMYNFbuyj2eOtf5gvTFRsUP8CAt4YrlUqUdUQ/ALBNUaYAAAAAUKJKfvzjZW-wP4CsUeoXE-GIzFK8PQs3/" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	3:1352812670.318497 'NoneType' object has no attribute 'delete'
+	: Traceback (most recent call last):
+	:   File "/base/python_runtime/python_lib/versions/1/google/appengine/ext/webapp/_webapp25.py", line 710, in __call__
+	:     handler.get(*groups)
+	:   File "/base/data/home/apps/s~neuron-ism/3.363133378802795228/temp_convert.py", line 42, in get
+	:     BlobInfo.get(key).delete()
+	: AttributeError: 'NoneType' object has no attribute 'delete'
+0.1.0.30 - r.97all [13/Nov/2012:05:18:06 -0800] "POST /temp/convert/error HTTP/1.1" 200 2183 "http://neuron-ism.appspot.com/temp/convert" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352812686.053756 Response written is not UTF-8: 'utf8' codec can't decode byte 0x8a in position 9986: unexpected code byte
+0.1.0.30 - sengan001 [13/Nov/2012:05:43:29 -0800] "POST /temp/convert/error HTTP/1.1" 200 2184 "http://neuron-ism.appspot.com/temp/convert" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352814209.651055 Response written is not UTF-8: 'utf8' codec can't decode byte 0x8a in position 9986: unexpected code byte
+0.1.0.30 - sengan001 [13/Nov/2012:05:45:18 -0800] "POST /temp/convert/error HTTP/1.1" 200 4125 "http://neuron-ism.appspot.com/temp/convert" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352814318.732594 Response written is not UTF-8: 'utf8' codec can't decode byte 0x93 in position 1498: unexpected code byte
+0.1.0.30 - sengan001 [13/Nov/2012:05:45:56 -0800] "POST /temp/convert/error HTTP/1.1" 200 6548 "http://neuron-ism.appspot.com/temp/convert" "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352814356.433500 Response written is not UTF-8: 'utf8' codec can't decode byte 0x93 in position 3630: unexpected code byte
+0.1.0.1 - - [13/Nov/2012:06:01:51 -0800] "GET /admin/continue_batch HTTP/1.1" 200 197 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352815311.979652 input 92 games of 2012-11-10 for 2. current score in the queue finished.
+0.1.0.1 - - [13/Nov/2012:07:01:46 -0800] "GET /admin/continue_batch HTTP/1.1" 200 197 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352818906.389648 input 68 games of 2012-11-11 for 2. current score in the queue finished.
+0.1.0.1 - - [13/Nov/2012:08:01:12 -0800] "GET /admin/continue_batch HTTP/1.1" 200 197 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352822472.370732 input 67 games of 2012-11-12 for 2. current score in the queue finished.
+0.1.0.1 - - [13/Nov/2012:09:01:34 -0800] "GET /admin/continue_batch HTTP/1.1" 200 197 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352826094.397596 input 83 games of 2012-11-13 for 2. current score in the queue finished.
+0.1.0.1 - - [13/Nov/2012:10:05:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352829900.740056 input 448 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [13/Nov/2012:11:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352833501.479217 input 398 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [13/Nov/2012:12:05:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352837100.941112 input 387 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [13/Nov/2012:13:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352840701.805246 input 389 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [13/Nov/2012:14:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352844301.783180 input 363 games of 2000-01-01 for 3. current score in the queue continues.
+222.227.162.56 - r.97all [13/Nov/2012:14:39:53 -0800] "GET /admin/continue_batch HTTP/1.1" 200 207 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	0:1352846393.110214 input 4 games of 2000-01-01 for 3. current score in the queue continues.
+222.227.162.56 - r.97all [13/Nov/2012:14:40:30 -0800] "GET /admin/continue_batch HTTP/1.1" 200 207 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	0:1352846430.665257 input 4 games of 2000-01-01 for 3. current score in the queue continues.
+	1:1352846430.667654 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - r.97all [13/Nov/2012:14:40:36 -0800] "GET /favicon.ico HTTP/1.1" 200 1433 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352846432.583362 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+222.227.162.56 - r.97all [13/Nov/2012:14:46:47 -0800] "GET /admin/stop_all=yes HTTP/1.1" 302 166 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352846807.167340 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352846807.456603 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - r.97all [13/Nov/2012:14:46:49 -0800] "GET / HTTP/1.1" 200 1433 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352846808.018203 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352846809.614336 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - r.97all [13/Nov/2012:14:47:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 207 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	0:1352846821.257044 input 5 games of 2000-01-01 for 3. current score in the queue continues.
+222.227.162.56 - r.97all [13/Nov/2012:14:47:48 -0800] "GET /admin/continue_batch HTTP/1.1" 200 164 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	0:1352846868.507873 input is stopped.
+222.227.162.56 - r.97all [13/Nov/2012:14:49:58 -0800] "GET /admin?start_all=yes HTTP/1.1" 302 166 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352846997.512973 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352846998.145124 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - r.97all [13/Nov/2012:14:49:59 -0800] "GET / HTTP/1.1" 200 1433 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352846998.581437 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352846999.171149 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - r.97all [13/Nov/2012:14:50:07 -0800] "GET /admin/continue_batch HTTP/1.1" 200 208 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	0:1352847007.919776 input 6 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [13/Nov/2012:15:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352847901.460322 input 362 games of 2000-01-01 for 3. current score in the queue continues.
+	1:1352847901.462989 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - r.97all [13/Nov/2012:15:18:47 -0800] "GET /favicon.ico HTTP/1.1" 200 1433 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352848726.844840 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+222.227.162.56 - r.97all [13/Nov/2012:15:18:55 -0800] "GET /admin/continue_batch HTTP/1.1" 200 164 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	0:1352848735.971733 input is stopped.
+0.1.0.1 - - [13/Nov/2012:15:24:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352849041.219064 input is stopped.
+0.1.0.1 - - [13/Nov/2012:15:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352849400.271125 input is stopped.
+0.1.0.1 - - [13/Nov/2012:15:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352849760.332110 input is stopped.
+0.1.0.1 - - [13/Nov/2012:15:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352850120.373782 input is stopped.
+0.1.0.1 - - [13/Nov/2012:15:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352850480.404671 input is stopped.
+0.1.0.1 - - [13/Nov/2012:15:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352850840.435791 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352851200.463403 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352851560.499785 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352851920.528232 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352852280.584565 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352852640.647416 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352853000.966269 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:36:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352853361.019716 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352853720.083138 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352854080.271440 input is stopped.
+0.1.0.1 - - [13/Nov/2012:16:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352854440.319228 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352854800.370213 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352855160.398236 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352855520.431785 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352855880.460826 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352856240.489516 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352856600.518966 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352856960.547188 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352857320.577336 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352857680.688335 input is stopped.
+0.1.0.1 - - [13/Nov/2012:17:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352858040.718253 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352858400.747484 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352858760.880203 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352859120.908136 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352859480.029268 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:25:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352859901.158827 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352860200.188389 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352860560.273692 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352860920.328011 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352861280.390561 input is stopped.
+0.1.0.1 - - [13/Nov/2012:18:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352861640.439218 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352862000.633884 input is stopped.
+	1:1352862000.636383 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+222.227.162.56 - neuron.ohori [13/Nov/2012:19:01:09 -0800] "GET / HTTP/1.1" 200 1193 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352862068.642869 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+222.227.162.56 - neuron.ohori [13/Nov/2012:19:01:20 -0800] "GET /favicon.ico HTTP/1.1" 200 1193 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352862079.482734 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352862080.010945 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+0.1.0.1 - - [13/Nov/2012:19:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352862360.740275 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352862720.841329 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352863080.872998 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352863440.902436 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352863800.930055 input is stopped.
+222.227.162.56 - neuron.ohori [13/Nov/2012:19:32:50 -0800] "GET /branch/frequent?del=80 HTTP/1.1" 200 489 - "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352863970.407709 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352863970.758003 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+0.1.0.1 - - [13/Nov/2012:19:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352864160.985388 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:42:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352864521.002327 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352864880.033369 input is stopped.
+0.1.0.1 - - [13/Nov/2012:19:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352865240.164436 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352865600.309984 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352865960.353012 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352866320.385294 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352866680.427155 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352867040.463370 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352867400.495719 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352867760.523322 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352868120.561807 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352868480.608377 input is stopped.
+0.1.0.1 - - [13/Nov/2012:20:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352868840.636451 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352869200.887739 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352869560.923983 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352869920.976167 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:18:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352870281.002675 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352870640.030292 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352871000.058072 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352871360.094034 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352871720.127340 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352872080.165936 input is stopped.
+0.1.0.1 - - [13/Nov/2012:21:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352872440.210459 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352872800.284321 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352873160.318636 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352873520.521024 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352873880.146866 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352874240.186363 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352874600.220778 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352874960.254054 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352875320.292161 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352875680.347793 input is stopped.
+0.1.0.1 - - [13/Nov/2012:22:54:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352876040.378079 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:00:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352876400.408874 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352876760.436709 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:12:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352877120.470424 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:18:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352877480.515507 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:24:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352877840.552363 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:30:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352878200.701773 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:36:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352878560.732608 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:42:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352878920.917654 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:48:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352879280.976476 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:54:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352879641.014430 input is stopped.
+0.1.0.1 - - [13/Nov/2012:23:58:00 -0800] "GET /admin?start_all=yes HTTP/1.1" 500 590 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	3:1352879880.156936 'NoneType' object has no attribute 'user_id'
+	: Traceback (most recent call last):
+	:   File "/base/python_runtime/python_lib/versions/1/google/appengine/ext/webapp/_webapp25.py", line 710, in __call__
+	:     handler.get(*groups)
+	:   File "/base/data/home/apps/s~neuron-ism/3.363156644260198047/admin.py", line 85, in get
+	:     master = Master.all().filter('uid =', user.user_id()).get()
+	: AttributeError: 'NoneType' object has no attribute 'user_id'
+0.1.0.1 - - [14/Nov/2012:00:05:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352880300.312940 input 380 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352880661.098762 input 404 games of 2000-01-01 for 3. current score in the queue continues.
+210.131.1.16 - neuronhonbu [14/Nov/2012:00:16:45 -0800] "GET / HTTP/1.1" 200 973 - "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11"
+	2:1352881005.271200 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352881005.690988 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+0.1.0.1 - - [14/Nov/2012:00:17:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352881020.845983 input 409 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:23:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352881380.796731 input 423 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:29:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352881741.594161 input 397 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:35:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352882100.839536 input 401 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:41:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352882460.856211 input 414 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:47:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352882821.863794 input 410 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352883181.490867 input 388 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:00:59:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352883540.974112 input 400 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352883900.855839 input 400 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:11:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352884260.440424 input 423 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:17:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352884621.095202 input 417 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:23:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352884980.866904 input 400 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:29:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352885341.663106 input 384 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:35:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352885701.041830 input 392 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:41:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352886060.784458 input 419 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:47:02 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352886422.394040 input 420 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352886781.318682 input 424 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:01:59:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352887140.513484 input 414 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:05:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352887500.760333 input 386 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352887861.357973 input 367 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:17:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352888221.561563 input 323 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352888581.248005 input 383 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:29:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352888940.576898 input 373 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:35:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352889301.386889 input 398 games of 2000-01-01 for 3. current score in the queue continues.
+219.198.198.46 - neuronkamata [14/Nov/2012:02:36:51 -0800] "GET /branch/frequent HTTP/1.1" 200 489 - "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; YTB730; .NET4.0C)"
+	2:1352889410.769525 You are using the default Django version (0.96). The default Django version will change in an App Engine release in the near future. Please call use_library() to explicitly select a Django version. For more information see https://developers.google.com/appengine/docs/python/tools/libraries#Django
+	1:1352889411.604913 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.
+0.1.0.1 - - [14/Nov/2012:02:41:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352889661.642397 input 384 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:47:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352890020.802542 input 402 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:53:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352890380.717094 input 386 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:02:59:02 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352890741.922999 input 380 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:05:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352891100.640875 input 371 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352891461.613047 input 375 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:17:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352891821.548340 input 373 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352892181.060224 input 367 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:29:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352892541.267663 input 366 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:32:46 -0800] "GET /admin/continue_batch HTTP/1.1" 200 198 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352892766.131222 input 207 games of 2000-01-01 for 3. current score in the queue finished.
+0.1.0.1 - - [14/Nov/2012:03:41:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352893260.606883 input 383 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:47:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352893621.553364 input 393 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352893981.025423 input 384 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:03:59:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352894340.926644 input 382 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352894701.907993 input 360 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352895061.261618 input 363 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:17:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352895420.802789 input 354 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352895781.454508 input 365 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:29:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352896141.197822 input 343 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:35:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352896500.988671 input 340 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:41:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352896860.959409 input 339 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:47:02 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352897222.117995 input 348 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352897580.950103 input 354 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:04:59:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352897941.814053 input 242 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:05:02 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352898302.512035 input 271 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:11:02 -0800] "GET /admin/continue_batch HTTP/1.1" 200 198 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352898662.044574 input 77 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:17:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352899021.398695 input 231 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 198 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352899381.955462 input 76 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:29:05 -0800] "GET /admin/continue_batch HTTP/1.1" 200 198 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352899745.118096 input 76 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:35:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352900100.766508 input 169 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:41:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352900461.027755 input 365 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:47:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352900820.693309 input 366 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352901181.113831 input 375 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:05:59:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352901540.594068 input 359 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352901901.243228 input 324 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352902261.244921 input 338 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:17:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352902620.517921 input 336 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:23:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352902980.926481 input 356 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:29:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352903340.625684 input 371 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:35:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352903700.989847 input 356 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:41:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352904060.776716 input 341 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:47:02 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352904422.553367 input 358 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352904781.257780 input 345 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:06:59:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352905140.630900 input 361 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352905501.026587 input 344 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352905861.299804 input 331 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:17:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352906220.811978 input 329 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352906581.103284 input 353 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:29:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352906941.988080 input 349 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:35:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352907301.265463 input 340 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:41:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352907661.035888 input 345 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:47:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352908020.884834 input 346 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:53:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352908381.271380 input 359 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:07:59:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352908740.841573 input 333 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:05:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352909101.238416 input 345 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:11:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352909460.795952 input 341 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:17:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352909821.420895 input 328 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352910181.455331 input 334 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:29:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352910541.420910 input 335 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:35:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352910901.349639 input 328 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:38:04 -0800] "GET /admin/continue_batch HTTP/1.1" 200 198 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352911084.016024 input 127 games of 2000-01-01 for 3. current score in the queue finished.
+0.1.0.1 - - [14/Nov/2012:08:47:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352911620.230864 input 320 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:53:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352911980.762223 input 349 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:08:59:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352912341.388264 input 356 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:05:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352912700.605369 input 303 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:11:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352913060.910785 input 293 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:17:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352913420.647877 input 296 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:23:01 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352913781.207911 input 303 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:29:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352914140.917514 input 299 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:35:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 199 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352914500.580134 input 299 games of 2000-01-01 for 3. current score in the queue continues.
+0.1.0.1 - - [14/Nov/2012:09:37:48 -0800] "GET /admin/continue_batch HTTP/1.1" 200 198 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	0:1352914668.827218 input 109 games of 2000-01-01 for 3. current score in the queue finished.
+0.1.0.1 - - [14/Nov/2012:14:06:00 -0800] "GET /admin/continue_batch HTTP/1.1" 200 144 - "AppEngine-Google; (+http://code.google.com/appengine)"
+	1:1352930760.891557 This request caused a new process to be started for your application, and thus caused your application code to be loaded for the first time. This request may thus take longer and use more CPU than a typical request for your application.

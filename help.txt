@@ -1,0 +1,106 @@
+Usage: appcfg.py [options] <action>
+
+Action must be one of:
+  backends: Perform a backend action.
+  backends configure: Reconfigure a backend without stopping it.
+  backends delete: Delete a backend.
+  backends list: List all backends configured for the app.
+  backends rollback: Roll back an update of a backend.
+  backends start: Start a backend.
+  backends stop: Stop a backend.
+  backends update: Update one or more backends.
+  create_bulkloader_config: Create a bulkloader.yaml from a running application.
+  cron_info: Display information about cron jobs.
+  download_app: Download a previously-uploaded app.
+  download_data: Download entities from datastore.
+  help: Print help for a specific action.
+  request_logs: Write request logs in Apache common log format.
+  rollback: Rollback an in-progress update.
+  set_default_version: Set the default (serving) version.
+  update: Create or update an app version.
+  update_cron: Update application cron definitions.
+  update_dos: Update application dos definitions.
+  update_indexes: Update application indexes.
+  update_queues: Update application task queue definitions.
+  upload_data: Upload data records to datastore.
+  vacuum_indexes: Delete unused indexes from application.
+Use 'help <action>' for a detailed description.
+
+Options:
+  -h, --help            Show the help message and exit.
+  -q, --quiet           Print errors only.
+  -v, --verbose         Print info level logs.
+  --noisy               Print all logs.
+  -s SERVER, --server=SERVER
+                        The App Engine server.
+  --insecure            Use HTTP when communicating with the server.
+  -e EMAIL, --email=EMAIL
+                        The username to use. Will prompt if omitted.
+  -H HOST, --host=HOST  Overrides the Host header sent with all RPCs.
+  --no_cookies          Do not save authentication cookies to local disk.
+  --skip_sdk_update_check
+                        Do not check for SDK updates.
+  --passin              Read the login password from stdin.
+  -A APP_ID, --application=APP_ID
+                        Override application from app.yaml file.
+  -V VERSION, --version=VERSION
+                        Override (major) version from app.yaml file.
+  -r RUNTIME, --runtime=RUNTIME
+                        Override runtime from app.yaml file.
+  -R, --allow_any_runtime
+                        Do not validate the runtime in app.yaml
+  -f, --force           Force deletion without being prompted.
+  --has_header          Whether the first line of the input file should be
+                        skipped
+  --loader_opts=LOADER_OPTS
+                        A string to pass to the Loader.initialize method.
+  --url=URL             The location of the remote_api endpoint.
+  --batch_size=BATCH_SIZE
+                        Number of records to post in each request.
+  --bandwidth_limit=BANDWIDTH_LIMIT
+                        The maximum bytes/second bandwidth for transfers.
+  --rps_limit=RPS_LIMIT
+                        The maximum records/second for transfers.
+  --http_limit=HTTP_LIMIT
+                        The maximum requests/second for transfers.
+  --db_filename=DB_FILENAME
+                        Name of the progress database file.
+  --auth_domain=AUTH_DOMAIN
+                        The name of the authorization domain to use.
+  --log_file=LOG_FILE   File to write bulkloader logs.  If not supplied then a
+                        new log file will be created, named: bulkloader-log-
+                        TIMESTAMP.
+  --dry_run             Do not execute any remote_api calls
+  --namespace=NAMESPACE
+                        Namespace to use when accessing datastore.
+  --num_threads=NUM_THREADS
+                        Number of threads to transfer records with.
+  --filename=FILENAME   The name of the file where output data is to be
+                        written. (Required)
+  --kind=KIND           The kind of the entities to retrieve.
+  --exporter_opts=EXPORTER_OPTS
+                        A string to pass to the Exporter.initialize method.
+  --result_db_filename=RESULT_DB_FILENAME
+                        Database to write entities to for download.
+  --config_file=CONFIG_FILE
+                        Name of the configuration file.
+  --num_runs=NUM_RUNS   Number of runs of each cron job to displayDefault is 5
+  -S SIZE, --max_size=SIZE
+                        Maximum size of a file to upload.
+  --no_precompilation   Disable automatic Python precompilation.
+  --backends            Update backends when performing appcfg update.
+  -n NUM_DAYS, --num_days=NUM_DAYS
+                        Number of days worth of log data to get. The cut-off
+                        point is midnight US/Pacific. Use 0 to get all
+                        available logs. Default is 1, unless --append is also
+                        given; then the default is 0.
+  -a, --append          Append to existing file.
+  --severity=SEVERITY   Severity of app-level log messages to get. The range
+                        is 0 (DEBUG) through 4 (CRITICAL). If omitted, only
+                        request logs are returned.
+  --vhost=VHOST         The virtual host of log messages to get. If omitted,
+                        all log messages are returned.
+  --include_vhost       Include virtual host in log messages.
+  --include_all         Include everything in log messages.
+  --end_date=END_DATE   End date (as YYYY-MM-DD) of period for log data.
+                        Defaults to today.

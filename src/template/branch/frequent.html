@@ -1,0 +1,20 @@
+{% extends "../base.html" %}
+{% block title %}Frequent Query of {{ bname }}{% endblock %}
+{% block content %}
+<h1>Frequent Query of {{ bname }}</h1>
+{% if additional_message %}<p>{{ additional_message }}</p>{% endif %}
+<h2>Query result</h2>
+<table>
+<caption>frequent query</caption>
+<thead><tr><th>Player</th><th>#G mod 20</th><th>last game</th><th class="last-column">delete</th></tr></thead>
+<tbody>{% for data in datum %}
+<tr{% if forloop.last %} class="last-row"{% endif %}><td>{{ data.pid }}</td><td>{{ data.games }}</td><td>{{ data.date|date:"Y/m/d" }}</td><td class="last-column"><a href="/branch/frequent?del={{ data.pid }}">delete</a></td></tr>{% endfor %}
+</tbody>
+</table>
+<h2>Add query</h2>
+<form action="/branch/frequent" method="get">
+  <p>input player id: <input type="text" name="add" /></p>
+  <p><input type="submit" value="submit" /></p>
+</form>
+
+{% endblock %}

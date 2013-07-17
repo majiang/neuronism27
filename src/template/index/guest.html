@@ -1,0 +1,22 @@
+
+<hr />
+
+<h2>index for guests</h2>
+
+<h3>成績閲覧権限の申請: お客様用</h3>
+<p>まずは <a href="/static/faq.html">FAQ</a> をご覧になることをおすすめします。</p>
+<form action="/guest/register/viewer" method="post">
+	<p>参加加盟校の選択:
+	<select name="bid">{% for branch in branches %}
+		<option value="{{ branch.bid }}">{{ branch.name }}</option>{% endfor %}
+	</select></p>
+	<p>会員番号の入力: <input type="text" name="pid" /></p>
+	<p><input type="submit" value="submit" /></p>
+</form>
+
+<h3>register as branch (加盟校管理機能の申請: 運営者用)</h3>
+<form action="/guest/register/branch" method="post">
+	<p>input branch ID: <input type="text" name="bid" /></p>
+	<p>input branch name: <input type="text" name="name" /></p>
+	<p><input type="submit" value="submit" /></p>
+</form>

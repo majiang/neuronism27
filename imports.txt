@@ -1,0 +1,147 @@
+admin.py:1:from google.appengine.ext.webapp import WSGIApplication
+admin.py:2:from google.appengine.ext.webapp.util import run_wsgi_app
+admin.py:3:from google.appengine.api.users import is_current_user_admin
+admin.py:4:from myhandler import MyHandler
+admin.py:5:from userdata import Master, Branch
+admin.py:6:from scoredata import BranchCounter, BranchState, SumScore, Player, QueueStopper
+admin.py:7:from google.appengine.api import mail
+admin.py:8:import logging
+admin.py:9:from branch_player import MatchScore, WholeScore
+admin_continue_batch.py:1:import logging
+admin_continue_batch.py:2:from scoredata import QueueScore, QueueStopper
+admin_continue_batch.py:3:from StringIO import StringIO
+admin_continue_batch.py:4:from score import get_players, get_points
+admin_continue_batch.py:5:from dbmanager import add_game
+admin_continue_batch.py:6:from google.appengine.ext.webapp.util import run_wsgi_app
+admin_continue_batch.py:7:from google.appengine.ext.webapp import WSGIApplication
+admin_continue_batch.py:8:from datetime import datetime, timedelta
+admin_continue_batch.py:9:from util import long_ago
+admin_continue_batch.py:10:from myhandler import MyHandler
+admin_continue_batch.py:11:#from google.appengine.runtime import DeadlineExceededError
+admin_get_ss.py:1:from google.appengine.ext.webapp import RequestHandler
+admin_get_ss.py:2:from scoredata import get_ss
+admin_get_ss.py:3:from google.appengine.ext.webapp.util import run_wsgi_app
+admin_get_ss.py:4:from google.appengine.ext.webapp import WSGIApplication
+branch_frequent_query.py:1:from myhandler import BranchGeneral
+branch_frequent_query.py:2:from scoredata import FrequentQuery
+branch_player.py:1:from myhandler import BranchGeneral
+branch_player.py:2:from scoredata import Player
+branch_player.py:3:from datetime import date
+branch_player.py:4:from time import strptime
+branch_player.py:5:from util import long_ago
+branch_player_active.py:1:from myhandler import BranchGeneral
+branch_player_active.py:2:from scoredata import Player
+branch_player_degree.py:1:from myhandler import BranchGeneral
+branch_player_degree.py:2:from scoredata import Player
+branch_player_inactive.py:1:from myhandler import BranchGeneral
+branch_player_inactive.py:2:from scoredata import Player
+branch_player_inactive.py:3:from datetime import datetime, timedelta
+branch_player_list.py:1:from myhandler import BranchGeneral
+branch_player_list.py:2:from scoredata import Player
+branch_previewers.py:1:from myhandler import BranchGeneral
+branch_previewers.py:2:from userdata import PreViewer, Viewer, get_branch
+branch_rating_ranking.py:1:from myhandler import BranchGeneral
+branch_rating_ranking.py:2:from scoredata import Player
+branch_rating_ranking.py:3:from util import long_ago
+branch_report.py:1:from myhandler import BranchGeneral, MyHandler
+branch_report.py:2:from datetime import date
+branch_report.py:3:from scoredata import SumScore, get_ss, SpanScore
+branch_report.py:4:from google.appengine.api import mail, users
+branch_report.py:5:from userdata import Branch
+branch_score_cancel.py:1:from myhandler import BranchGeneral
+branch_score_cancel.py:2:from google.appengine.ext.blobstore import BlobInfo
+branch_score_confirm.py:1:from myhandler import BranchGeneral
+branch_score_confirm.py:2:from google.appengine.ext.blobstore import BlobReader, BlobKey, BlobInfo
+branch_score_confirm.py:3:from scoredata import branch_newest_date, QueueScore
+branch_score_confirm.py:4:from score import valid
+branch_score_confirm.py:5:import util
+branch_score_preview.py:1:from google.appengine.ext.webapp.blobstore_handlers import BlobstoreUploadHandler as BUH
+branch_score_preview.py:2:from google.appengine.ext.blobstore import BlobKey, BlobReader
+branch_score_preview.py:3:from os.path import join
+branch_score_preview.py:4:from google.appengine.ext.webapp.template import render
+branch_score_preview.py:5:from myhandler import dir_path
+branch_score_preview.py:6:from util import min_date, max_date, today, tomorrow
+branch_score_preview.py:7:from score import valid
+branch_score_preview.py:8:from scoredata import branch_newest_date, count_unprocessed
+branch_score_preview.py:9:from google.appengine.api.users import get_current_user
+branch_score_preview.py:10:from userdata import Branch
+branch_score_upload.py:1:from google.appengine.ext import blobstore
+branch_score_upload.py:2:from myhandler import BranchGeneral
+branch_score_upload.py:3:from userdata import get_branch
+branch_score_view.py:1:from myhandler import BranchGeneral
+branch_score_view.py:2:from datetime import date
+branch_score_view.py:3:from scoredata import SumScore, get_ss, SpanScore
+dbmanager.py:1:from scoredata import get_player, get_branch
+dbmanager.py:3:from rating import NeuronismRating
+example.py:1:from google.appengine.ext.webapp import WSGIApplication
+example.py:2:from google.appengine.ext.webapp.util import run_wsgi_app
+example.py:3:from myhandler import MyHandler
+guest_register_branch.py:1:from google.appengine.ext.webapp import WSGIApplication
+guest_register_branch.py:2:from google.appengine.ext.webapp.util import run_wsgi_app
+guest_register_branch.py:3:from myhandler import MyHandler
+guest_register_branch.py:4:from userdata import PreBranch, Branch
+guest_register_viewer.py:1:from google.appengine.ext.webapp import WSGIApplication
+guest_register_viewer.py:2:from google.appengine.ext.webapp.util import run_wsgi_app
+guest_register_viewer.py:3:from myhandler import MyHandler
+guest_register_viewer.py:4:from userdata import PreViewer, Branch
+index.py:1:from google.appengine.ext.webapp import WSGIApplication
+index.py:2:from google.appengine.ext.webapp.util import run_wsgi_app
+index.py:3:from myhandler import MyHandler
+index.py:4:import userdata
+index.py:5:from google.appengine.api.users import create_logout_url
+index.py:6:from scoredata import count_unprocessed, BranchCounter
+index.py:7:from datetime import datetime
+main.py:1:from google.appengine.ext.webapp import WSGIApplication
+main.py:2:from google.appengine.ext.webapp.util import run_wsgi_app
+main.py:4:from index import IndexPage
+main.py:5:from admin import AdminPage
+main.py:6:from master_prebranches import MasterPrebranchesPage
+main.py:7:from master_branches import MasterBranchesPage, BranchSelfStatsPage
+main.py:8:from branch_previewers import BranchPreviewersPage
+main.py:9:from guest_register_branch import GuestRegisterBranchPage
+main.py:10:from guest_register_viewer import GuestRegisterViewerPage
+main.py:12:from branch_player_list import BranchPlayerListPage
+main.py:13:from branch_score_upload import BranchScoreUploadPage
+main.py:14:from branch_score_preview import BranchScorePreviewPage
+main.py:15:from branch_score_confirm import BranchScoreConfirmPage
+main.py:16:from branch_score_cancel import BranchScoreCancelPage
+main.py:17:from branch_score_view import BranchScoreViewPage
+main.py:18:from branch_player import BranchPlayerPage
+main.py:19:from branch_rating_ranking import BranchRatingRankingPage
+main.py:20:from branch_frequent_query import BranchFrequentQueryPage
+main.py:21:from branch_report import BranchReportPage, AdminAutoReportPage
+main.py:23:from branch_player_active import BranchPlayerActivePage
+main.py:24:from branch_player_inactive import BranchPlayerInactivePage
+main.py:25:from branch_player_degree import BranchPlayerDegreePage
+main.py:27:from viewer_score_default import ViewerScoreDefaultPage
+main.py:28:from viewer_support import ViewerSupportPage
+main.py:29:from viewer_rating_ranking import ViewerRatingRankingPage
+master_branches.py:1:from myhandler import MasterGeneral, BranchGeneral
+master_branches.py:2:from userdata import Branch
+master_branches.py:3:from scoredata import BranchState, BranchCounter
+master_prebranches.py:1:from myhandler import MasterGeneral
+master_prebranches.py:2:from userdata import PreBranch, Branch
+myhandler.py:1:#from google.appengine.api import memcache
+myhandler.py:2:import logging
+myhandler.py:3:from google.appengine.ext.webapp.template import render
+myhandler.py:4:from google.appengine.ext.webapp import RequestHandler
+myhandler.py:5:from google.appengine.api.users import get_current_user
+myhandler.py:6:from google.appengine.api import mail
+myhandler.py:7:from os.path import join, dirname
+myhandler.py:8:from userdata import Master, Branch, Viewer
+rating.py:1:from math import exp, tanh
+score.py:1:import datetime
+scoredata.py:1:from google.appengine.ext import db
+scoredata.py:2:from util import min_date, yesterday, firstday, long_ago
+userdata.py:1:from google.appengine.ext import db
+userdata.py:25:        from scoredata import BranchState
+util.py:1:from datetime import date, timedelta
+viewer_rating_ranking.py:1:from myhandler import ViewerGeneral
+viewer_rating_ranking.py:2:from scoredata import Player
+viewer_rating_ranking.py:3:from userdata import get_branch
+viewer_score_default.py:1:from myhandler import ViewerGeneral
+viewer_score_default.py:2:from scoredata import Player
+viewer_score_default.py:3:from userdata import Branch
+viewer_score_default.py:4:from branch_player import MatchScore, WholeScore
+viewer_support.py:1:from myhandler import ViewerGeneral
+viewer_support.py:2:from google.appengine.api import mail

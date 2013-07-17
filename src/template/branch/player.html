@@ -1,0 +1,88 @@
+{% extends "../base.html" %}
+{% block title %}Whole score of player {{ bname }}-{{ pid }}{% endblock %}
+{% block addheader %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages: ["corechart"]});
+function drawgraph()
+{
+    var data = google.visualization.arrayToDataTable([
+      ['Played', 'Rating'],
+      {% for score in scores %}[{{ score.game_no }}, {{ score.R_aft }}], {% if forloop.last %}[{{ score.game_no|add:"-1" }}, {{ score.R_bef }}]{% endif %}{% endfor %}
+    ]);
+    var options = {title: 'Rating Process of Player {{ bname }}-{{ pid }}'};
+    var chart = new google.visualization.LineChart(document.getElementById('graph_area'));
+    chart.draw(data, options);
+}
+</script>
+{% endblock %}
+{% block content %}
+<h1>Whole score of player {{ bname }}-{{ pid }}</h1>
+<h2>Summary</h2>
+<dl><dt>games played
+</dt><dd>{{ whole_score.game_count }} of <strong>{{ played }}</strong>
+</dd><dt>min / current / max rating
+</dt><dd>{{ whole_score.min_R|floatformat:2 }} / {{ whole_score.curr_R|floatformat:2 }} / {{ whole_score.max_R|floatformat:2 }}
+</dd><dt>rank distribution
+</dt><dd>{% for r in whole_score.rank_dist %}{{ r }}{% if not forloop.last %} - {% endif %}{% endfor %}
+</dd><dd>{% for r in whole_score.rank_perc %}{{ r }}%{% if not forloop.last %} - {% endif %}{% endfor %}
+</dd><dt>point distribution
+</dt><dd>{% for p in whole_score.pdr %}{% if forloop.first or forloop.last %}<strong>{% endif %}{{ p }}{% if forloop.first %}</strong> sweeps{% endif %}{% if forloop.last %}</strong> flies{% else %} - {% endif %}{% endfor %}
+</dd><dt>opponent rating
+</dt><dd>{{ whole_score.av_oppR|floatformat:0 }} &#177; {{ whole_score.dev_oppR|floatformat:0 }}
+</dd><dt>average score
+</dt><dd>{{ whole_score.av_score|floatformat:0 }} &#177; {{ whole_score.dev_score|floatformat:0 }}
+</dd><dt>min .. max score
+</dt><dd>{{ whole_score.min_score }} .. {{ whole_score.max_score }}
+</dd><dt>average performance (rating to converge)
+</dt><dd>{{ whole_score.av_perf|floatformat:0 }} &#177; {{ whole_score.dev_perf|floatformat:0 }}
+</dd>{% if whole_score.VPM %}<dt>visit per month
+</dt><dd>{{ whole_score.VPM|floatformat:1 }}
+</dd>{% endif %}{% if whole_score.GPV %}<dt>game per visit{% if whole_score.GPM %} / month{% endif %}
+</dt><dd>{{ whole_score.GPV|floatformat:1 }}{% if whole_score.GPM %} / {{whole_score.GPM }}{% endif %}
+</dd>{% endif %}</dl>
+<div id="graph_area" style="width: 800px; height: 600px; border: 1px #000;"></div>
+<script type="text/javascript">drawgraph();</script>
+{% if not simple %}
+<h2>Visit History</h2>
+<table>
+  <caption>Visit History of Player {{ bname }}-{{ pid }}</caption>
+  <thead><tr>
+    <th>Date</th>
+    <th class="last-column">Played</th>
+  </tr></thead>
+  <tbody>{% for date_info in whole_score.date_dist %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+    <td style="font-weight: bold; color: #{{ date_info.color }}">{{ date_info.date }}</td>
+    <td class="last-column">{{ date_info.played }}</td>
+  </tr>{% endfor %}</tbody>
+</table>
+<h2>Detail</h2>
+<table>
+  <caption>Detail Score of Player {{ bname }}-{{ pid }}</caption>
+  <thead><tr>
+    <th>#</th>
+    <th class="last-column">Date</th>
+    <th>Rank</th>
+    <th class="last-column">Point</th>
+    <th>R bef.</th>
+    <th class="last-column">R aft.</th>
+    <th>Score</th>
+    <th>oppR</th>
+    <th class="last-column">Perf</th>
+  </tr></thead>
+  <tbody>{% for score in scores %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+    <td>{{ score.game_no }}</td>
+    <td class="last-column">{{ score.game_date }}</td>
+    <td>{{ score.rank }}</td>
+    <td class="last-column">{{ score.point }}</td>
+    <td>{{ score.R_bef|floatformat:0 }}</td>
+    <td class="last-column"{% if score.R_red %} style="background-color: ffcccc"{% else %}{% if score.R_yellow %} style="background-color: ffffcc"{% endif %}{% endif %}>{% if score.R_strong %}<strong>{% endif %}{{ score.R_aft|floatformat:0 }}{% if score.R_strong %}</strong>{% endif %}</td>
+    <td>{{ score.score }}</td>
+    <td>{{ score.R_opp|floatformat:0 }}</td>
+    <td class="last-column">{{ score.perf|floatformat:0 }}</td>
+  </tr>{% endfor %}</tbody>
+</table>
+{% else %}
+<p><a href="/branch/player?pid={{ pid }}&limit=400&detail=yes">detail (400 games)</a> / <a href="/branch/player?pid={{ pid }}&limit=1000&detail=yes">detail (1000 games)</a> / <a href="/branch/player?pid={{ pid }}&detail=yes">detail (all games)</a></p>
+{% endif %}
+{% endblock %}

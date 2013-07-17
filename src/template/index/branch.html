@@ -1,0 +1,24 @@
+
+<hr />
+
+<h2>index for branches: {{ bname }} ({{ played }} games until {{ last_game|date:"Y/m/d" }})</h2>
+
+<h3>基本メニュー</h3>
+<ul>
+  <li>System status: {% if unp %}警告: {{ unp }} つのファイルがキューに残っています。すべての操作が可能ですが、入力チェックおよび出力は不完全です。{% else %}OK. データは最新です。{% endif %}</li>
+  <li><a href="/branch/stats">加盟校統計</a></li>
+  <li><a href="/branch/score/upload">アップロード</a></li>
+  <li><a href="/branch/score/view">今月の成績</a></li>
+  <li><a href="/branch/player/active">最近のプレイヤー</a></li>
+  <li><a href="/branch/player/inactive">最近みないプレイヤー</a></li>
+  <li><a href="/branch/rating">レーティング</a></li>
+  <li><a href="/branch/player/list">会員リスト</a></li>
+  <li><a href="/static/qaB52561949D12BEA5.html">Q&amp;A</a> <strong>ここに回答があるような質問は無視します。</strong></li>
+</ul>
+
+<h3>advanced menu</h3>
+<ul>
+  <li><a href="/branch/frequent">何ゲーム目β</a></li>
+  <li><a href="/branch/previewer">成績閲覧権申請</a></li>
+  {% if master %}<li><a href="/master/branch?quit=yes">quit representation</a> (master only)</li>{% endif %}
+</ul>

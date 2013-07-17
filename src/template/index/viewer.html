@@ -1,0 +1,25 @@
+<hr />
+
+<h2>個人成績の閲覧β</h2>
+
+<p>機能は予告なく追加/変更されることがあります。</p>
+<h3>最近100ゲーム</h3>
+<form action="/viewer/score" method="get">
+  <p>プレイヤーを選択:
+  <select name="viewer">{% for viewer in viewers %}
+	<option value="{{ viewer.id }}">{{ viewer.bname }}[{{ viewer.bid }}] - {{ viewer.pid }}</option>{% endfor %}
+  </select></p>
+  <p><input type="submit" value="submit" /></p>
+</form>
+
+<h3>レーティングランキング</h3>
+<form action="/viewer/rating" method="get">
+  <p>閲覧権限のある加盟校を選択:
+  <select name="viewer">{% for viewer in viewers %}
+	<option value="{{ viewer.id }}">{{ viewer.bname }}[{{ viewer.bid }}]</option>{% endfor %}
+  </select></p>
+  <p><input type="submit" value="submit" /></p>
+</form>
+
+<h3>サポート</h3>
+<p><a href="/static/faq.html">FAQ</a> を読んでも解決しない疑問については、<a href="/viewer/support">メールフォーム</a> よりシステム管理者への問合せが可能です。</p>

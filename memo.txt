@@ -1,0 +1,9 @@
+test results.
+
+executed	8min * 24 times
+input	7584 games
+used	(9.27 - 28) < 0 instance hours
+	(1120 - 50) K writes	
+	(170 - 50) K reads
+cost	$(1.12-0.05) for writes
+	$(0.119-0.035) for reads

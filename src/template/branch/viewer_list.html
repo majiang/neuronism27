@@ -1,0 +1,25 @@
+{% extends "../table.html" %}
+
+{% block title %}Viewer List{% endblock %}
+
+{% block caption %}Viewer List{% endblock %}
+
+{% block thead %}
+		<tr>
+			<th>nickname</th>
+			<th>e-mail</th>
+			<th>branch</th>
+			<th>player</th>
+			<th class="last-column">ID</th>
+		</tr>
+{% endblock %}
+
+{% block tbody %}{% for viewer in viewers %}
+		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+			<td>{{ viewer.user.nickname }}</td>
+			<td>{{ viewer.user.email }}</td>
+			<td>{{ viewer.branch_id }}</td>
+			<td>{{ viewer.player_id }}</td>
+			<td class="last-column">{{ viewer.key.id }}</td>
+		</tr>{% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "../base.html" %}
+{% block title %}Rival statistics for {{ pid }} VS {{ rid }} in {{ bname }}{% endblock %}
+{% block addheader %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+// add codes here to draw graph
+</script>
+{% endblock %}
+{% block content %}
+<table><caption>Rival statistics for {{ pid }} VS {{ rid }} in {{ bname}}</caption>
+<thead><tr><th>{{ pid }}</th><th>{{ rid }}</th></tr></thead>
+<tbody>
+{% for score in scores %}
+<tr><td>{{ score.my_score }}</td><td>{{ score.rival_score }}</td></tr>{% endfor %}
+</tbody>
+{% endblock %}
