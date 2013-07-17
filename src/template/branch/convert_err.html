@@ -1,8 +1,0 @@
-{% extends "../base.html" %}
-{% block title %}Converting old score file{% endblock %}
-{% block content %}
-<h1>旧スコアファイル変換: エラープレビュー</h1>
-<p><a href="/temp/convert/do?key={{ key }}">変換後ファイルのダウンロード</a> / <a href="/temp/convert/cancel?key={{ key }}">変換キャンセル</a> を選択できます。以下のエラーを注意深くチェックしてください。</p>
-<p>{% for line in lines %}{{ line }}<br />
-{% endfor %}</p>
-{% endblock %}
