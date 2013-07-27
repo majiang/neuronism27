@@ -1,27 +1,27 @@
-{% extends "../table.html" %}
+{% extends "/template/table.html" %}
 
 {% block title %}Branch List{% endblock %}
 
 {% block caption %}Branch List{% endblock %}
 
 {% block thead %}
-		<tr>
-			<th>ID</th>
-			<th>name</th>
-			<th>#G</th>
-			<th>owner nickname</th>
-			<th>owner e-mail</th>
-			<th class="last-column">represent</th>
-		</tr>
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>#G</th>
+            <th>owner nickname</th>
+            <th>owner e-mail</th>
+            <th class="last-column">represent</th>
+        </tr>
 {% endblock %}
 
 {% block tbody %}{% for branch in branches %}
-		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
-			<td><a href="/master/branch?bid={{ branch.bid }}">{{ branch.bid }}</td>
-			<td>{{ branch.name }}</td>
-			<td>{{ branch.games }}</td>
-			<td>{{ branch.user.nickname }}</td>
-			<td>{{ branch.user.email }}</td>
-			<td class="last-column"><a href="/master/branch?represent=yes&bid={{ branch.bid }}">represent</a></td>
-		</tr>{% endfor %}
+        {% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+            <td><a href="/master/branch?bid={{ branch.bid }}">{{ branch.bid }}</td>
+            <td>{{ branch.name }}</td>
+            <td>{{ branch.games }}</td>
+            <td>{{ branch.user.nickname }}</td>
+            <td>{{ branch.user.email }}</td>
+            <td class="last-column"><a href="/master/branch?represent=yes&bid={{ branch.bid }}">represent</a></td>
+        </tr>{% endfor %}
 {% endblock %}

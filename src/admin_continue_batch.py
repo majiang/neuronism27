@@ -22,9 +22,6 @@ def get_qs():
 class AdminContinueBatchPage(MyHandler):
 
     def get(self):
-        #if not (datetime(2012, 05, 14, 07) < datetime.today() < datetime(2012, 05, 15, 07)):
-        #    self.response.out.write('out of testtime')
-        #    return
         deadline = datetime.today()
         qs = get_qs()
         if qs is None:
@@ -68,5 +65,5 @@ class AdminContinueBatchPage(MyHandler):
         self.response.out.write('input %d games of %s for %d. current score in the queue continues.' % (i, date, bid))
 
 app = WSGIApplication([
-    ('/admin/continue_batch', AdminContinueBatchPage)
-], debug=True)
+      ('/admin/continue_batch', AdminContinueBatchPage)
+    ], debug=True)
