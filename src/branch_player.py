@@ -127,6 +127,8 @@ class BranchPlayerPage(BranchGeneral):
         if player is None:
             return self.response.out.write(
               "player %d of %s doesn't exist" % (pid, self.branch_name()))
+        if self.get_str('admin_view') == 'yes':
+            return self.response.out.write('<br>'.join(player.detail.strip().split('\n')))
         lines = player.detail.strip().split('\n')
         n = len(lines)
         if use_all or not 0 < limit <= n:

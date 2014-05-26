@@ -3,10 +3,12 @@ from scoredata import QueueScore, QueueStopper
 from StringIO import StringIO
 from score import get_players, get_points
 from dbmanager import add_game
+from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.ext.webapp import WSGIApplication
 from datetime import datetime, timedelta
 from util import long_ago
 from myhandler import MyHandler
+from time import sleep
 #from google.appengine.runtime import DeadlineExceededError
 
 def get_qs():
@@ -22,6 +24,9 @@ def get_qs():
 class AdminContinueBatchPage(MyHandler):
 
     def get(self):
+        #if not (datetime(2012, 05, 14, 07) < datetime.today() < datetime(2012, 05, 15, 07)):
+        #    self.response.out.write('out of testtime')
+        #    return
         deadline = datetime.today()
         qs = get_qs()
         if qs is None:
@@ -50,6 +55,7 @@ class AdminContinueBatchPage(MyHandler):
             points = get_points(dat[4:])
             try:
                 add_game(bid, date, players, points)
+                sleep(3)
             except Exception, e:
                 logging.debug('input %d games of %s for %d and caught %s when inputting line"%s"' % (i, date, bid, repr(e), line))
                 qs.put()
@@ -64,6 +70,6 @@ class AdminContinueBatchPage(MyHandler):
         logging.debug('input %d games of %s for %d. current score in the queue continues.' % (i, date, bid))
         self.response.out.write('input %d games of %s for %d. current score in the queue continues.' % (i, date, bid))
 
-app = WSGIApplication([
-      ('/admin/continue_batch', AdminContinueBatchPage)
-    ], debug=True)
+run_wsgi_app(WSGIApplication([
+    ('/admin/continue_batch', AdminContinueBatchPage)
+], debug=True))

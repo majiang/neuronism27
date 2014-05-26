@@ -1,12 +1,7 @@
-application: neuronism2
-version: 1
-runtime: python27
+application: neuron-ism
+version: 3
+runtime: python
 api_version: 1
-threadsafe: true
-
-#env_variables:
-# DJANGO_SETTINGS_MODULE: 'settings'
-
 
 handlers:
 
@@ -18,14 +13,25 @@ handlers:
 - url: /static
   static_dir: static_html
 
+- url: /neuron
+  static_dir: website/generated
+
+#- url: /admin/get_ss.*
+#  script: admin_get_ss.py
+#  login: admin
+
 - url: /admin/continue_batch.*
-  script: admin_continue_batch.app
+  script: admin_continue_batch.py
+  login: admin
+
+- url: /admin/report.*
+  script: main.py
   login: admin
 
 - url: /admin.*
-  script: admin.app
+  script: admin.py
   login: admin
 
 - url: /.*
-  script: main.app
+  script: main.py
   login: required

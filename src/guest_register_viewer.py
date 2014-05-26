@@ -1,4 +1,5 @@
 from google.appengine.ext.webapp import WSGIApplication
+from google.appengine.ext.webapp.util import run_wsgi_app
 from myhandler import MyHandler
 from userdata import PreViewer, Branch
 
@@ -29,6 +30,7 @@ class GuestRegisterViewerPage(MyHandler):
         finally:
             self.write_out('guest/viewer/' + template, content)
 
-app = WSGIApplication([
+if __name__ == '__main__':
+    run_wsgi_app(WSGIApplication([
       ('/guest/register/viewer.*', GuestRegisterViewerPage),
-    ], debug=True)
+    ], debug=True))

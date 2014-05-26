@@ -3,7 +3,7 @@ from google.appengine.api import mail
 
 class ViewerSupportPage(ViewerGeneral):
     def get(self):
-        self.write_out('viewer/support', {'email': self.user().email()})
+        self.write_out('viewer/support', {'email': self.user().email(), 'auth': 'viewer'})
     def post(self):
         sender = self.user().email()
         to = 'r.97all@gmail.com'

@@ -13,7 +13,7 @@
 <li>件名には問合せ内容を端的に書いてください。(例:「項目『○○』の意味」「読み込みエラー」)</li>
 </ul>
 
-<form action="/viewer/support" method="post">
+<form action="/{{ auth }}/support" method="post">
 	<p>件名: <input type="text" name="subject" size="40" /></p>
 	<p>本文:</p>
 	<p><textarea name="body" rows="20" columns="80"></textarea></p>

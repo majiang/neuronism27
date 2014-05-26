@@ -3,6 +3,7 @@ from datetime import date
 from scoredata import SumScore, get_ss, SpanScore
 from google.appengine.api import mail, users
 from userdata import Branch
+import logging
 
 class BranchReportPage(BranchGeneral):
     def get_real(self, bid):
@@ -91,19 +92,18 @@ class AdminAutoReportPage(MyHandler):
                 r.rp_gain, r.rank[0], r.rank[1], r.rank[2], r.rank[3],
                 r.finish_date, r.games, r.rating_bef, r.rating_aft
             )
-        sender = branch.name + ' <admin@%s.appspotmail.com>' % self.app_name()
+        sender = branch.name + ' <admin@neuron-ism.appspotmail.com>'
         neuron = 'Neuron Backup <neuron.honbu+backup@gmail.com>'
         stneuron = 'Neuron Central <stneuron@nifty.com>'
-        developer = 'r.97all@gmail.com' ##
+        developer = 'r.97all@gmail.com'
         subject = 'NeuronISM: %d-%d score of %s' % (year, month, branch.name)
         body = 'see attachment.'
         attachments = [('%d-%d-%s.csv' % (year, month, branch.name), attatchment)]
         mail.send_mail(
                 sender=sender,
-                #to=[branch.user.email(), neuron, stneuron],
-                to=[developer],
+                to=[branch.user.email(), neuron, stneuron, developer],
                 subject=subject,
                 body=body,
                 attachments=attachments
             )
-
+        logging.debug('email sent: {sender: %s, to: %s, subject: %s, body: %s}' % (sender, [branch.user.email(), neuron, stneuron, developer], subject, body))

@@ -13,6 +13,12 @@ def color_from_rating(R):
         return '#ccffcc'
     return '#cccccc'
 
+def transform_player(player):
+    R = player.curR
+    return {
+            'rating_color': color_from_rating(R),
+            'curR': R,
+            }
 
 class ViewerRatingRankingPage(ViewerGeneral):
 
@@ -22,12 +28,9 @@ class ViewerRatingRankingPage(ViewerGeneral):
     def get_real(self, viewer):
         bid = viewer.bid
         played = max(self.get_int('games', 1000), 400)
-        limit = min(max(self.get_int('limit', 300), 50), 500)
-        players = filter(lambda player: played <= player.played,
-            Player.all().filter('bid =', bid).filter('rated', True).order('-last_visit').fetch(limit))
-        players.sort(key=lambda player: -player.curR)
-        for i in range(len(players)):
-            players[i].rating_color = color_from_rating(players[i].curR)
+        limit = min(max(self.get_int('limit', 150), 50), 500)
+        players = sorted((transform_player(player) for player in Player.all().filter('bid =', bid).filter('rated', True).order('-last_visit').fetch(limit)
+                      if played <= player.played), key=lambda player: -player['curR'])
         content = {
           'bname': get_branch(bid).name,
           'games': played,

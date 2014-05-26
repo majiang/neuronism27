@@ -57,6 +57,7 @@ class IndexPage(MyHandler):
         self.write_out('index/footer', {})
 
 
-app = WSGIApplication([
+if __name__ == '__main__':
+    run_wsgi_app(WSGIApplication([
         ('/.*', IndexPage),
-    ], debug=True)
+    ], debug=True))
