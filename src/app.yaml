@@ -2,7 +2,7 @@ application: neuronism2
 version: 1
 runtime: python27
 api_version: 1
-threadsafe: true
+threadsafe: false
 
 handlers:
 
@@ -41,4 +41,7 @@ handlers:
 libraries:
 
 - name: webapp2
-- version: latest
+  version: latest
+
+- name: jinja2
+  version: latest

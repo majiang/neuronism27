@@ -1,5 +1,5 @@
-from google.appengine.ext.webapp2 import WSGIApplication
-from google.appengine.ext.webapp2.util import run_wsgi_app
+from webapp2 import WSGIApplication
+from google.appengine.ext.webapp.util import run_wsgi_app
 from myhandler import MyHandler
 import userdata
 from google.appengine.api.users import create_logout_url

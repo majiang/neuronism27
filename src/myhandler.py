@@ -1,7 +1,7 @@
 #from google.appengine.api import memcache
 import logging
-from google.appengine.ext.webapp2.template import render
-from google.appengine.ext.webapp2 import RequestHandler
+from webapp2.template import render
+from webapp2 import RequestHandler
 from google.appengine.api.users import get_current_user
 from google.appengine.api import mail
 from os.path import join, dirname

@@ -18,6 +18,8 @@ develop-eggs
 lib
 lib64
 
+src/template/todo.txt
+
 # Installer logs
 pip-log.txt
 

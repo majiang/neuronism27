@@ -1,5 +1,5 @@
-from google.appengine.ext.webapp2 import WSGIApplication
-from google.appengine.ext.webapp2.util import run_wsgi_app
+from webapp2 import WSGIApplication
+from google.appengine.ext.webapp.util import run_wsgi_app
 from google.appengine.api.users import is_current_user_admin
 from myhandler import MyHandler
 from userdata import Master, Branch
