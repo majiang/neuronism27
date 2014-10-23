@@ -1,11 +1,10 @@
-{% extends "../table.html" %}
-
-{% block title %}Pre-Branch List{% endblock %}
-
-{% block caption %}Pre-Branch List{% endblock %}
-
-{% block thead %}
-		<tr>
+<html><head>
+<title>Pre-Branch List - Neuron Integrated Score Manager</title>
+<link rel="stylesheet" href="/css/css.css" />
+</head><body>
+<table class="score">
+	<caption>Pre-Branch List</caption>
+	<thead>{% block thead %}		<tr>
 			<th>name</th>
 			<th>nickname</th>
 			<th>e-mail</th>
@@ -13,15 +12,15 @@
 			<th>accept</th>
 			<th class="last-column">reject</th>
 		</tr>
-{% endblock %}
-
-{% block tbody %}{% for prebranch in prebranches %}
-		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+{% endblock %}</thead>
+	<tbody>{% block tbody %}{% for prebranch in prebranches %}
+		{% if not loop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
 			<td>{{ prebranch.name }}</td>
-			<td>{{ prebranch.user.nickname }}</td>
-			<td>{{ prebranch.user.email }}</td>
+			<td>{{ prebranch.user.nickname() }}</td>
+			<td>{{ prebranch.user.email() }}</td>
 			<td class="last-column">{{ prebranch.bid }}</td>
-			<td><a href="/master/prebranch?action=accept&id={{ prebranch.key.id }}">accept</a></td>
-			<td><a href="/master/prebranch?action=reject&id={{ prebranch.key.id }}">reject</a></td>
-		</tr>{% endfor %}
-{% endblock %}
+			<td><a href="/master/prebranch?action=accept&id={{ prebranch.key().id() }}">accept</a></td>
+			<td><a href="/master/prebranch?action=reject&id={{ prebranch.key().id() }}">reject</a></td>
+		</tr>{% endfor %}{% endblock %}</tbody>
+</table>
+</body></html>

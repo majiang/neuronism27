@@ -1,11 +1,16 @@
 #from google.appengine.api import memcache
 import logging
-from webapp2.template import render
 from webapp2 import RequestHandler
 from google.appengine.api.users import get_current_user
 from google.appengine.api import mail
 from os.path import join, dirname
 from userdata import Master, Branch, Viewer
+
+import jinja2
+jinja_env = jinja2.Environment(
+    autoescape=True,
+    loader=jinja2.FileSystemLoader(
+        join(dirname(__file__), 'template')))
 
 dir_path = join(dirname(__file__), 'template')
 
@@ -49,8 +54,8 @@ class MyHandler(RequestHandler):
 
     def write_out(self, file_name, content):
         'write content to response using template in fle_name'
-        self.response.out.write(render(
-          join(dir_path, file_name + '.html'),
+        self.response.out.write(
+            jinja_env.get_template(file_name + '.html').render(
           content
         ))
 

@@ -1,10 +1,10 @@
-{% extends "branch_add.html" %}
+{% extends "master/branch_add/branch_add.html" %}
 {% block result %}success{% endblock %}
 {% block internal %}<p>Activaton success:</p>
 <dl>
 	<dt>branch name</dt><dd>{{ branch.name }}</dd>
-	<dt>owner nickname</dt><dd>{{ branch.user.nickname }}</dd>
-	<dt>owner e-mail</dt><dd>{{ branch.user.email }}</dd>
+	<dt>owner nickname</dt><dd>{{ branch.user.nickname() }}</dd>
+	<dt>owner e-mail</dt><dd>{{ branch.user.email() }}</dd>
 	<dt>branch id</dt><dd>{{ branch.bid }}</dd>
 </dl>
 {% endblock %}

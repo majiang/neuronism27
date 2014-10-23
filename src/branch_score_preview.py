@@ -1,13 +1,17 @@
-from webapp2.blobstore_handlers import BlobstoreUploadHandler as BUH
+from google.appengine.ext.webapp.blobstore_handlers import BlobstoreUploadHandler as BUH
 from google.appengine.ext.blobstore import BlobKey, BlobReader
-from os.path import join
-from webapp2.template import render
-from myhandler import dir_path
+from os.path import join, dirname
 from util import min_date, max_date, today, tomorrow
 from score import valid
 from scoredata import branch_newest_date, count_unprocessed
 from google.appengine.api.users import get_current_user
 from userdata import Branch
+
+import jinja2
+jinja_env = jinja2.Environment(
+    autoescape=True,
+    loader=jinja2.FileSystemLoader(
+        join(dirname(__file__), 'template')))
 
 class BranchScorePreviewPage(BUH):
 
@@ -24,8 +28,8 @@ class BranchScorePreviewPage(BUH):
             self.error(403)
             return None
         if len(branches) > 1:
-            self.response.out.write(render(
-              join(dir_path, 'branch/multiple.html'),
+            self.response.out.write(
+              jinja_env.get_template('branch/multiple.html').render(
               {'action': 'uploading score'}
         ))
             return None
@@ -64,7 +68,6 @@ class BranchScorePreviewPage(BUH):
           'input_date': date_valid,
           'remain_queue': count_unprocessed(bid)
         }
-        self.response.out.write(render(
-          join(dir_path, 'branch/score/preview.html'),
+        self.response.out.write(jinja_env.get_template('branch/score/preview.html').render(
           content
         ))
