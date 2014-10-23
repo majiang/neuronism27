@@ -1,5 +1,8 @@
-{% extends "../../base.html" %}
-{% block title %}upload score preview{% endblock %}
+<html><head>
+<title>{% block title %}upload score preview{% endblock %} - Neuron Integrated Score Manager</title>
+<link rel="stylesheet" href="/css/css.css" />
+{% block addheader %}{% endblock %}
+</head><body>
 {% block content %}
 <p>すでに入力処理済のデータは <strong>{{ input_date|date:"Y/m/d" }}</strong> までです。{% if remain_queue %}キューにも未処理のゲームが残っています。{% endif %}</p>
 <h2>{{ bname }}: スコア確認</h2>
@@ -24,3 +27,4 @@
 <li>{{ error }}</li>
 {% endfor %}</ul>
 {% endblock %}
+</body></html>

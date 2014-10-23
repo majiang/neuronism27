@@ -1,5 +1,8 @@
-{% extends "../../base.html" %}
-{% block title %}{{ count }} scores for {{ bname }}{% endblock %}
+<html><head>
+<title>{% block title %}{{ count }} scores for {{ bname }}{% endblock %} - Neuron Integrated Score Manager</title>
+<link rel="stylesheet" href="/css/css.css" />
+{% block addheader %}{% endblock %}
+</head><body>
 {% block content %}
 <table>
   <caption>{% if navigation %}<a href="/branch/score/view?{{ prev_param }}">prev</a> | {% endif %}{{ count }} scores for {{ bname }}{% if navigation %} | <a href="/branch/score/view?{{ next_param }}">next</a>{% endif %}</caption>
@@ -35,3 +38,4 @@
   </tr>{% endfor %}</tbody>
 </table>
 {% endblock %}
+</body></html>

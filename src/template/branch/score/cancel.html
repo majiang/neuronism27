@@ -1,5 +1,9 @@
-{% extends "../../base.html" %}
-{% block title %}cancel uploading score{% endblock %}
+<html><head>
+<title>{% block title %}cancel uploading score{% endblock %} - Neuron Integrated Score Manager</title>
+<link rel="stylesheet" href="/css/css.css" />
+{% block addheader %}{% endblock %}
+</head><body>
 {% block content %}
 <p>Deletion {{ result }}. You can back to <a href="/">index</a> or <a href="/branch/score/upload">upload page</a>.</p>
 {% endblock %}
+</body></html>

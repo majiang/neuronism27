@@ -1,5 +1,9 @@
-{% extends "../base.html" %}
-{% block title %}Error on {{ action }}{% endblock %}
+<html><head>
+<title>{% block title %}Error on {{ action }}{% endblock %} - Neuron Integrated Score Manager</title>
+<link rel="stylesheet" href="/css/css.css" />
+{% block addheader %}{% endblock %}
+</head><body>
 {% block content %}
 <p>error on {{ action }}: {{ message }}.</p>
 {% endblock %}
+</body></html>
