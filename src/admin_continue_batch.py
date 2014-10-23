@@ -3,8 +3,8 @@ from scoredata import QueueScore, QueueStopper
 from StringIO import StringIO
 from score import get_players, get_points
 from dbmanager import add_game
-from google.appengine.ext.webapp.util import run_wsgi_app
-from google.appengine.ext.webapp import WSGIApplication
+from google.appengine.ext.webapp2.util import run_wsgi_app
+from google.appengine.ext.webapp2 import WSGIApplication
 from datetime import datetime, timedelta
 from util import long_ago
 from myhandler import MyHandler

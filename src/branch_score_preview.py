@@ -1,7 +1,7 @@
-from google.appengine.ext.webapp.blobstore_handlers import BlobstoreUploadHandler as BUH
+from google.appengine.ext.webapp2.blobstore_handlers import BlobstoreUploadHandler as BUH
 from google.appengine.ext.blobstore import BlobKey, BlobReader
 from os.path import join
-from google.appengine.ext.webapp.template import render
+from google.appengine.ext.webapp2.template import render
 from myhandler import dir_path
 from util import min_date, max_date, today, tomorrow
 from score import valid
