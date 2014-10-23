@@ -76,3 +76,12 @@ a.button
     background-color: #ccc;
     color: #000;
 }
+
+h2
+{
+    margin: 0.3em 0 0.2em 0;
+    padding: 0 0.4em;
+    color: #fff;
+    background-color: #080;
+    border-radius: 6px;
+}
