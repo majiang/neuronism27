@@ -36,3 +36,9 @@ handlers:
 - url: /.*
   script: main.py
   login: required
+
+
+libraries:
+
+- name: webapp2
+- version: latest
