@@ -22,24 +22,24 @@ function drawgraph()
 <dl><dt>games played
 </dt><dd>{{ whole_score.game_count }} of <strong>{{ played }}</strong>
 </dd><dt>min / current / max rating
-</dt><dd>{{ whole_score.min_R|floatformat:2 }} / {{ whole_score.curr_R|floatformat:2 }} / {{ whole_score.max_R|floatformat:2 }}
+</dt><dd>{{ "%.2f" % whole_score.min_R }} / {{ "%.2f" % whole_score.curr_R }} / {{ "%.2f" % whole_score.max_R }}
 </dd><dt>rank distribution
 </dt><dd>{% for r in whole_score.rank_dist %}{{ r }}{% if not loop.last %} - {% endif %}{% endfor %}
 </dd><dd>{% for r in whole_score.rank_perc %}{{ r }}%{% if not loop.last %} - {% endif %}{% endfor %}
 </dd><dt>point distribution
 </dt><dd>{% for p in whole_score.pdr %}{% if loop.first or loop.last %}<strong>{% endif %}{{ p }}{% if loop.first %}</strong> sweeps{% endif %}{% if loop.last %}</strong> flies{% else %} - {% endif %}{% endfor %}
 </dd><dt>opponent rating
-</dt><dd>{{ whole_score.av_oppR|floatformat:0 }} &#177; {{ whole_score.dev_oppR|floatformat:0 }}
+</dt><dd>{{ "%.0f" % whole_score.av_oppR }} &#177; {{ "%.0f" % whole_score.dev_oppR }}
 </dd><dt>average score
-</dt><dd>{{ whole_score.av_score|floatformat:0 }} &#177; {{ whole_score.dev_score|floatformat:0 }}
+</dt><dd>{{ "%.0f" % whole_score.av_score }} &#177; {{ "%.0f" % whole_score.dev_score }}
 </dd><dt>min .. max score
 </dt><dd>{{ whole_score.min_score }} .. {{ whole_score.max_score }}
 </dd><dt>average performance (rating to converge)
-</dt><dd>{{ whole_score.av_perf|floatformat:0 }} &#177; {{ whole_score.dev_perf|floatformat:0 }}
+</dt><dd>{{ "%.0f" % whole_score.av_perf }} &#177; {{ "%.0f" % whole_score.dev_perf }}
 </dd>{% if whole_score.VPM %}<dt>visit per month
-</dt><dd>{{ whole_score.VPM|floatformat:1 }}
+</dt><dd>{{ "%.1f" % whole_score.VPM }}
 </dd>{% endif %}{% if whole_score.GPV %}<dt>game per visit{% if whole_score.GPM %} / month{% endif %}
-</dt><dd>{{ whole_score.GPV|floatformat:1 }}{% if whole_score.GPM %} / {{whole_score.GPM }}{% endif %}
+</dt><dd>{{ "%.1f" % whole_score.GPV }}{% if whole_score.GPM %} / {{whole_score.GPM }}{% endif %}
 </dd>{% endif %}</dl>
 <div id="graph_area" style="width: 800px; height: 600px; border: 1px #000;"></div>
 <script type="text/javascript">drawgraph();</script>
@@ -75,11 +75,11 @@ function drawgraph()
     <td class="last-column">{{ score.game_date }}</td>
     <td>{{ score.rank }}</td>
     <td class="last-column">{{ score.point }}</td>
-    <td>{{ score.R_bef|floatformat:0 }}</td>
-    <td class="last-column"{% if score.R_red %} style="background-color: ffcccc"{% else %}{% if score.R_yellow %} style="background-color: ffffcc"{% endif %}{% endif %}>{% if score.R_strong %}<strong>{% endif %}{{ score.R_aft|floatformat:0 }}{% if score.R_strong %}</strong>{% endif %}</td>
+    <td>{{ "%.0f" % score.R_bef }}</td>
+    <td class="last-column"{% if score.R_red %} style="background-color: ffcccc"{% else %}{% if score.R_yellow %} style="background-color: ffffcc"{% endif %}{% endif %}>{% if score.R_strong %}<strong>{% endif %}{{ "%.0f" % score.R_aft }}{% if score.R_strong %}</strong>{% endif %}</td>
     <td>{{ score.score }}</td>
-    <td>{{ score.R_opp|floatformat:0 }}</td>
-    <td class="last-column">{{ score.perf|floatformat:0 }}</td>
+    <td>{{ "%.0f" % score.R_opp }}</td>
+    <td class="last-column">{{ "%.0f" % score.perf }}</td>
   </tr>{% endfor %}</tbody>
 </table>
 {% else %}

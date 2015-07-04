@@ -9,7 +9,7 @@
   </tr></thead>
   <tbody>{% for player in players %}<tr{% if loop.last %} class="last-row"{% endif %}>
     <td>{{ loop.index }}</td>
-    <td class="last-column" style="background-color: {{ player.rating_color }}">{{ player.curR|floatformat:2 }}</td>
+    <td class="last-column" style="background-color: {{ player.rating_color }}">{{ "%.2f" % player.curR }}</td>
   </tr>{% endfor %}</tbody>
 </table>
 {% endblock %}

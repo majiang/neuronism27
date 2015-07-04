@@ -22,18 +22,18 @@ function drawgraph()
 <dl><dt>games played
 </dt><dd><strong>{{ whole_score.game_count }}</strong> of <strong>{{ played }}</strong> (<a href="/viewer/score?viewer={{ viewer_id }}&limit={{ whole_score.game_count|add:100 }}">more</a> <a href="/viewer/score?viewer={{ viewer_id }}&limit={{ played }}">all</a>)
 </dd><dt>average performance (rating to converge)
-</dt><dd><strong>R{{ whole_score.av_perf|floatformat:0 }} &#177; {{ whole_score.dev_perf|floatformat:0 }}</strong>
+</dt><dd><strong>R{{ "%.0f" % whole_score.av_perf }} &#177; {{ "%.0f" % whole_score.dev_perf }}</strong>
 </dd><dt>min / current / max rating
-</dt><dd>R{{ whole_score.min_R|floatformat:2 }} / <strong>R{{ whole_score.curr_R|floatformat:2 }}</strong> / R{{ whole_score.max_R|floatformat:2 }}
+</dt><dd>R{{ "%.2f" % whole_score.min_R }} / <strong>R{{ "%.2f" % whole_score.curr_R }}</strong> / R{{ "%.2f" % whole_score.max_R }}
 </dd><dt>rank distribution
 </dt><dd>{% for r in whole_score.rank_dist %}{{ r }}{% if not loop.last %} - {% endif %}{% endfor %}
 </dd><dd>{% for r in whole_score.rank_perc %}{{ r }}%{% if not loop.last %} - {% endif %}{% endfor %}
 </dd><dt>point distribution
 </dt><dd>{% for p in whole_score.pdr %}{% if loop.first or loop.last %}<strong>{% endif %}{{ p }}{% if loop.first %}</strong> sweeps{% endif %}{% if loop.last %}</strong> flies{% else %} - {% endif %}{% endfor %}
 </dd><dt>opponent rating
-</dt><dd>R{{ whole_score.av_oppR|floatformat:0 }} &#177; {{ whole_score.dev_oppR|floatformat:0 }}
+</dt><dd>R{{ "%.0f" % whole_score.av_oppR }} &#177; {{ "%.0f" % whole_score.dev_oppR }}
 </dd><dt>average score
-</dt><dd>{{ whole_score.av_score|floatformat:0 }} &#177; {{ whole_score.dev_score|floatformat:0 }}
+</dt><dd>{{ "%.0f" % whole_score.av_score }} &#177; {{ "%.0f" % whole_score.dev_score }}
 </dd><dt>min .. max score
 </dt><dd>{{ whole_score.min_score }} .. {{ whole_score.max_score }}
 </dd></dl>
@@ -70,11 +70,11 @@ function drawgraph()
     <td class="last-column">{{ score.game_date }}</td>
     <td>{{ score.rank }}</td>
     <td class="last-column">{{ score.point }}</td>
-    <td>{% if after_float %}{{ score.R_bef|floatformat:2 }}{% else %}{{ score.R_bef|floatformat:0 }}{% endif %}</td>
-    <td class="last-column"{% if score.R_red %} style="background-color: ffcccc"{% else %}{% if score.R_yellow %} style="background-color: ffffcc"{% endif %}{% endif %}>{% if score.R_strong %}<strong>{% endif %}{% if after_float %}{{ score.R_aft|floatformat:2 }}{% else %}{{ score.R_aft|floatformat:0 }}{% endif %}{% if score.R_strong %}</strong>{% endif %}</td>
+    <td>{% if after_float %}{{ "%.2f" % score.R_bef }}{% else %}{{ "%.0f" % score.R_bef }}{% endif %}</td>
+    <td class="last-column"{% if score.R_red %} style="background-color: ffcccc"{% else %}{% if score.R_yellow %} style="background-color: ffffcc"{% endif %}{% endif %}>{% if score.R_strong %}<strong>{% endif %}{% if after_float %}{{ "%.2f" % score.R_aft }}{% else %}{{ "%.0f" % score.R_aft }}{% endif %}{% if score.R_strong %}</strong>{% endif %}</td>
     <td>{{ score.score }}</td>
-    <td>{% if after_float %}{{ score.R_opp|floatformat:2 }}{% else %}{{ score.R_opp|floatformat:0 }}{% endif %}</td>
-    <td class="last-column">{% if after_float %}{{ score.perf|floatformat:2 }}{% else %}{{ score.perf|floatformat:0 }}{% endif %}</td>
+    <td>{% if after_float %}{{ "%.2f" % score.R_opp }}{% else %}{{ "%.0f" % score.R_opp }}{% endif %}</td>
+    <td class="last-column">{% if after_float %}{{ "%.2f" % score.perf }}{% else %}{{ "%.0f" % score.perf }}{% endif %}</td>
   </tr>{% endfor %}</tbody>
 </table>{% endif %}
 {% endblock %}
