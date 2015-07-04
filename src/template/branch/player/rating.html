@@ -11,7 +11,7 @@
     <th class="last-column">last</th>
   </tr></thead>
   <tbody>{% for player in players %}<tr{% if loop.last %} class="last-row"{% endif %}>
-    <td>{{ forloop.counter }}</td>
+    <td>{{ loop.index }}</td>
     <td><a href="/branch/player?pid={{ player.pid }}">{{ player.pid }}</a></td>
     <td style="background-color: {{ player.rating_color }}">{{ "%.2f" % player.curR }}</td>
     <td style="background-color: {{ player.played_color }}">{{ player.played }}</td>
