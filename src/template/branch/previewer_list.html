@@ -1,4 +1,4 @@
-{% extends "../table.html" %}
+{% extends "table.html" %}
 
 {% block title %}Pre-Viewer List{% endblock %}
 
@@ -18,14 +18,14 @@
 {% endblock %}
 
 {% block tbody %}{% for previewer in previewers %}
-		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
-			<td>{{ previewer.user.nickname }}</td>
-			<td>{{ previewer.user.email }}</td>
+		{% if not loop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+			<td>{{ previewer.user.nickname() }}</td>
+			<td>{{ previewer.user.email() }}</td>
 			<td>{{ previewer.bid }}</td>
 			<td>{{ previewer.pid }}</td>
 			<td>{{ previewer.since }}</td>
-			<td class="last-column">{{ previewer.key.id }}</td>
-			<td><a href="/branch/previewer?action=accept&id={{ previewer.key.id }}">承認</a></td>
-			<td><a href="/branch/previewer?action=reject&id={{ previewer.key.id }}">拒否</a></td>
+			<td class="last-column">{{ previewer.key().id() }}</td>
+			<td><a href="/branch/previewer?action=accept&id={{ previewer.key().id() }}">承認</a></td>
+			<td><a href="/branch/previewer?action=reject&id={{ previewer.key().id() }}">拒否</a></td>
 		</tr>{% endfor %}
 {% endblock %}
