@@ -1,80 +1,153 @@
-body ul
+@import "/neuron/css/mahjax.css"; /* mahjax */
+/* common.css
+ *
+ * background
+ * container
+ * header
+ * * top
+ * * menu
+ * body
+ * footer
+ *
+ * mobile
+ */
+
+body /* background */
 {
-	margin-left: 4em;
+    margin: 0;
+    font-family:  "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif;
 }
 
-body > p
+body > div /* container */
 {
-	margin-left: 4em;
+    background: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 10px solid #fff;
+    border-right: 10px solid #fff;
+    width: 780px;
 }
 
-body form
+
+   /**    ***   ********       *****   ********
+   ***    ***   ********      ******   *********
+   ***    ***   ***          *** ***   ***    ***
+   **********   *******     ***  ***   ***     ***
+   **********   *******    ***   ***   ***     ***
+   ***    ***   ***        *********   ***    ***
+   ***    ***   ********  ***    ***   *********
+   ***    ***   ********  ***    ***   *******/
+
+header
 {
-	margin-left: 4em;
+    width: 100%;
+}
+
+header > div,
+header > a
+{
+    color: #000;
+    display: block;
+    border-radius: 6px;
+    margin: 0;
+
+    text-align: center;
+    /*background-image: url("/neuron/img/green.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;*/
+    background-color: #e9ffcc;
+    background: linear-gradient(to right, #d3ff99 8%, #fff 92%);
+    text-decoration: none;
+    position: relative;
+}
+header img /* shun.jpg */
+{
+    max-height: 100%;
+    max-width: 8%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 6px;
 }
 
 h1
 {
-	margin-left: 1em;
+/*  position: relative; /*<locate on the middle of the enclosing div or a>
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); /*/
+    margin: 0 8%;
+    font-size: 34px;
+}
+header > ul > li
+{
+    border-radius: 6px;
 }
 
-h2
+header > ul
 {
-	margin-left: 2em;
-}
-
-h3
-{
-	margin-left: 3em;
-}
-
-table
-{
-    border-top: 1px solid #630;
-    border-left: 1px solid #630;
-    margin: 10px;
-    border-spacing: 0;
-    empty-cells: show;
-    table-layout: fixed;
-}
-
-table td
-{
-    border-bottom: 1px dotted #630;
-    border-right: 1px dotted #630;
-    padding: 0.2em 0.5em;
-    text-align: right;
-}
-
-table th
-{
-    background-color: #fcc;
-    padding: 0.2em 0.5em;
+    list-style-type: none;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.45em; /* margin of the element next to this */
+    padding: 0;
     text-align: center;
 }
-
-table thead tr th
+header > ul > li
 {
-    border-bottom: 1px solid #630;
-    border-right: 1px dotted #630;
+    display: inline-block;
+    background-color: #fff67f;
+    margin: 0;
+    text-align: center;
+    line-height: 250%;
+    width: 12%;
 }
-
-table tr.last-row td
+header > ul > li > a
 {
-    border-bottom: 1px solid #630;
-}
-
-table .last-column
-{
-    border-right: 1px double #630;
-}
-
-a.button
-{
-    border: 2px outset #999;
+    display: block;
     text-decoration: none;
-    background-color: #ccc;
-    color: #000;
+    font-weight: bold;
+    color: #344;
+}
+
+header > ul > li
+{
+    background: linear-gradient(to bottom, #fff, #fff67f);
+    text-shadow:
+        1px 1px 2px #fff,
+        -1px 1px 2px #fff,
+        1px 1px 1px #fff,
+        -1px 1px 1px #fff,
+        1px -1px 1px #fff,
+        -1px -1px 1px #fff;
+    border: outset #ffbf11 thin;
+    box-shadow: 0px 1px 3px #666;
+} header > ul > li:hover
+{
+    background: linear-gradient(to top, #fff, #fff67f);
+    text-shadow:
+        1px -1px 2px #fff,
+        -1px -1px 2px #fff,
+        1px -1px 1px #fff,
+        -1px -1px 1px #fff,
+        1px 1px 1px #fff,
+        -1px 1px 1px #fff;
+    border: inset #ffbf11 thin;
+    box-shadow: none;
+} header > ul > li:active
+{
+    position: relative;
+    top: 1px;
+    font-color: #000;
+}
+
+
+
+body > div > div
+{
+    width: 100%;
 }
 
 h2
@@ -85,3 +158,373 @@ h2
     background-color: #080;
     border-radius: 6px;
 }
+h2:after
+{
+    font-size: 50%;
+    font-weight: normal;
+    color: #fff;
+    float: right;
+}
+
+.block-link
+{
+    text-decoration: none;
+}
+
+h3
+{
+    border-radius: 6px;
+    margin: 0.2em 0;
+    margin-bottom: 0.45em;
+    padding: 0;
+    display: block;
+    width: 99%;
+    background-color: #e9ffcc;
+    border: inset thin;
+    clear: both;
+    font-size: 120%;
+}
+
+h4
+{
+    font-size: 120%;
+}
+
+h5
+{
+    font-size: 110%;
+}
+
+h6
+{
+    font-size: 110%;
+    font-weight: normal;
+}
+
+
+   /********    ******      ******    *********
+   *********   ********    ********   *********
+   ***        ***    ***  ***    ***     ***
+   ********   ***    ***  ***    ***     ***
+   ********   ***    ***  ***    ***     ***
+   ***        ***    ***  ***    ***     ***
+   ***         ********    ********      ***
+   ***          ******      ******       **/
+
+footer
+{
+    margin-top: 0.2em;
+    clear: both;
+    width: 100%;
+    text-align: center;
+    background-color: #080;
+    background: linear-gradient(to right, #fff 5%, #080 35%, #080 65%, #fff 95%);
+    color: #fff;
+}
+
+
+   /******  **      **      ******
+   *******  ***    ***     ********
+     ***    ****  ****    ***
+     ***    ** **** **   ***   *****
+     ***    **  **  **   ***   *****
+     ***    **      **    ***    ***
+   *******  **      **     ********
+   *******  **      **      *****/
+
+body > div > div img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+figure
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* table */
+table
+{
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    border-spacing: 1px;
+}
+
+table > caption
+{
+    font-weight: bold;
+    color: #666;
+    text-align: left;
+    margin-top: 0.5em;
+    margin-left: 1em;
+    font-size: 150%;
+}
+
+thead > tr
+{
+    background-color: #333;
+    color: #fff;
+}
+
+tbody > tr:nth-last-of-type(odd)
+{
+    background-color: #eee;
+}
+
+tbody > tr:nth-last-of-type(even)
+{
+    background-color: #fff;
+}
+
+tbody > td
+{
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+td a
+{
+    display: block;
+}
+
+/* mobile */
+
+@media screen and (max-width: 780px)
+{
+    body
+    {
+        background: none;
+    }
+    body > div
+    {
+        width: 100% !important;
+        margin-left: none !important;
+        margin-right: none !important;
+        padding-top: 0.3ex !important;
+        padding-bottom: 1ex !important;
+        border: none !important;
+    }
+    header > div
+    {
+        height: auto;
+    }
+    h1:before
+    {
+        content: "";
+    }
+    h1
+    {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none; /* </> */
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    body > div > div,
+    body > div > div > div
+    {
+        width: 100% !important;
+        clear: both !important;
+        float: none !important;
+    }
+    header > ul > li
+    {
+        display: inline-block !important;
+        border: none;
+        width: 24% !important;
+        margin: 1px !important;
+    }
+    header > ul > li:hover
+    {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    #neuron-desc
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    header > ul > li
+    {
+        display: inline-block !important;
+        width: 49% !important;
+        line-height: 200% !important;
+    }
+}
+
+@media screen and (max-width: 160px)
+{
+    header > ul > li
+    {
+        display: block !important;
+        width: 100% !important;
+    }
+}
+
+
+
+      /*****    ***             ******     ******      ******  
+     ********   ***             ******    ********    ******** 
+    ***    ***  ***            *** ***   ***     **  ***     **
+   ***          ***            ***  ***   *****       *****    
+   ***          ***           ***   ***      *****       ***** 
+    ***    ***  ***           *********  **     ***  **     ***
+     ********   **********   ***    ***   ********    ******** 
+      ******    **********   ***    ***    ******      *****/
+
+
+.just-to-clear
+{
+    clear: both;
+    display: none;
+}
+
+.topics:after
+{
+    content: " - 麻雀イベントのレポートや加盟校紹介など";
+}
+.columns:after
+{
+    content: " - 何切るクイズ・戦術・麻雀川柳など";
+}
+.org:after
+{
+    content: "";
+}
+.pr:after
+{
+    content: " - マスメディアなどによる紹介";
+}
+.lib:after
+{
+    content: " - ニューロンの風景";
+}
+.events:after
+{
+    content: " - 参加者募集";
+}
+.school:after
+{
+    content: " - 専門施設・カルチャーセンター講座など";
+}
+
+.date, .non-date, .description,
+.year, .month, .day
+{
+    display: inline;
+    float: left;
+    font-size: 80%;
+}
+.date:nth-of-type(1), .non-date:nth-of-type(1), .description:nth-of-type(1), .year:nth-of-type(1)
+{
+    margin-left: 1em;
+    padding-left: 0.5em;
+}
+.date, .non-date, .description
+{
+    padding-right: 0.5em;
+}
+.month, .day
+{
+    padding-left: 0;
+}
+.month, .day, .year
+{
+    padding-right: 0;
+}
+
+.year:after{content: "年";}
+.month:after{content: "月";}
+.day:after{content: "日";}
+
+.title
+{
+    display: block;
+    clear: both;
+    font-size: 140%;
+    color: #373737;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-shadow:
+        -1px -1px 3px #fff,
+        1px -1px 3px #fff,
+        -1px 1px 3px #fff,
+        1px 1px 3px #fff;
+}
+
+
+
+
+dd > ul > li:nth-of-type(1)
+{
+    clear: both;
+}
+
+address
+{
+    display: block;
+    text-align: right;
+    font-style: normal;
+}
+
+a.button
+{
+    display: inline-block;
+    font-size: 150%;
+    background: linear-gradient(to bottom, #fff, #fff67f);
+    padding: 0.5ex 1.0em;
+    text-shadow:
+        1px 1px 2px #fff,
+        -1px 1px 2px #fff,
+        1px 1px 1px #fff,
+        -1px 1px 1px #fff,
+        1px -1px 1px #fff,
+        -1px -1px 1px #fff;
+    border: outset #ffbf11 thin;
+    border-radius: 6px;
+    box-shadow: 0px 1px 3px #666;
+    font-weight: bold;
+    font-family: /* cf: http://d.hatena.ne.jp/n-yuji/20130225/p1 */
+        'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', /* iOS and Mac */
+        Meiryo, 'メイリオ', /* Windows */
+        sans-serif;
+    text-decoration: none;
+    color: #344;
+}   a.button:hover
+{
+    background: linear-gradient(to top, #fff, #fff67f);
+    text-shadow:
+        1px -1px 2px #fff,
+        -1px -1px 2px #fff,
+        1px -1px 1px #fff,
+        -1px -1px 1px #fff,
+        1px 1px 1px #fff,
+        -1px 1px 1px #fff;
+    border: inset #ffbf11 thin;
+    box-shadow: none;
+}   a.button:active
+{
+    position: relative;
+    top: 1px;
+    color: #000;
+}
+
+body > div > div > div > img,
+figure img
+{
+    width: 100%;
+    height: auto;
+}
+
