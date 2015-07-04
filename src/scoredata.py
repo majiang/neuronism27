@@ -178,8 +178,8 @@ class Player(db.Model):
         self.played += 1
         if 100 <= self.played:
             self.customer = True
-            if 400 <= self.played:
-                self.rated = True
+        if 10 <= self.played:
+            self.rated = True
         prev = self.get_prev(-20)
         if prev:
             self.prev_visit = prev.date

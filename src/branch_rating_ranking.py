@@ -34,7 +34,7 @@ class BranchRatingRankingPage(BranchGeneral):
         return 'constructing rating ranking'
 
     def get_real(self, bid):
-        played = max(self.get_int('games', 1000), 400)
+        played = max(self.get_int('games', 100), 10)
         limit = min(max(self.get_int('limit', 300), 50), 500)
         players = filter(lambda player: played <= player.played,
             Player.all().filter('bid =', bid).filter('rated', True).order('-last_visit').fetch(limit))
