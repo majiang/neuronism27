@@ -18,13 +18,13 @@
   <tbody>{% for player in players %}<tr{% if forloop.last %} class="last-row"{% endif %}>
     <td><a href="/branch/player?pid={{ player.pid }}">{{ player.pid }}</a></td>
     <td>{% if player.rated %}{{ player.curR|floatformat:2 }}{% endif %}</td>
-    <td class="last-column">{{ player.last_visit|date:"Y/m/d" }}</td>
-    <td>{{ player.prev_visit|date:"Y/m/d" }}</td>
+    <td class="last-column">{{ player.last_visit.strftime("%Y/%m/%d") }}</td>
+    <td>{{ player.prev_visit.strftime("%Y/%m/%d") }}</td>
     <td>{{ player.played }}</td>
     <td class="last-column">{{ player.customer|yesno:"Yes," }}</td>
     <td>{% if player.rated %}{{ player.maxR|floatformat:2 }}{% endif %}</td>
     <td>{% if player.degree %}{{ player.degree }}{% endif %}</td>
-    <td class="last-column">{{ player.achieve_date|date:"Y/m/d" }}</td>
+    <td class="last-column">{{ player.achieve_date.strftime("%Y/%m/%d") }}</td>
   </tr>{% endfor %}</tbody>
 </table>
 {% if navigation %}<p><a href="/branch/player/{{ page_url }}?{{ prev_param }}">prev</a> / <a href="/branch/player/{{ page_url }}?{{ next_param }}">next</a></p>{% endif %}

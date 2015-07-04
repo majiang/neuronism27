@@ -31,7 +31,7 @@
 {% for p in score.point_summary %}    <td{% if forloop.last %} class="last-column"{% endif %}>{{ p }}</td>
 {% endfor %}    <td>{{ score.rp_gain }}</td>
 {% for r in score.rank %}    <td{% if forloop.last %} class="last-column"{% endif %}>{{ r }}</td>
-{% endfor %}    <td>{{ score.finish_date|date:"Y/m/d" }}</td>
+{% endfor %}    <td>{{ score.finish_date.strftime("%Y/%m/%d") }}</td>
     <td>{{ score.games }}</td>
     <td>{{ score.rating_bef|floatformat:2 }}</td>
     <td class="last-column">{{ score.rating_aft|floatformat:2 }}</td>

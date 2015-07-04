@@ -8,7 +8,7 @@
 <caption>frequent query</caption>
 <thead><tr><th>Player</th><th>#G mod 20</th><th>last game</th><th class="last-column">delete</th></tr></thead>
 <tbody>{% for data in datum %}
-<tr{% if forloop.last %} class="last-row"{% endif %}><td>{{ data.pid }}</td><td>{{ data.games }}</td><td>{{ data.date|date:"Y/m/d" }}</td><td class="last-column"><a href="/branch/frequent?del={{ data.pid }}">delete</a></td></tr>{% endfor %}
+<tr{% if forloop.last %} class="last-row"{% endif %}><td>{{ data.pid }}</td><td>{{ data.games }}</td><td>{{ data.date.strftime("%Y/%m/%d") }}</td><td class="last-column"><a href="/branch/frequent?del={{ data.pid }}">delete</a></td></tr>{% endfor %}
 </tbody>
 </table>
 <h2>Add query</h2>

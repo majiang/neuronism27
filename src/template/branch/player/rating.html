@@ -15,7 +15,7 @@
     <td><a href="/branch/player?pid={{ player.pid }}">{{ player.pid }}</a></td>
     <td style="background-color: {{ player.rating_color }}">{{ player.curR|floatformat:2 }}</td>
     <td style="background-color: {{ player.played_color }}">{{ player.played }}</td>
-    <td class="last-column">{{ player.last_visit|date:"Y/m/d" }}</td>
+    <td class="last-column">{{ player.last_visit.strftime("%Y/%m/%d") }}</td>
   </tr>{% endfor %}</tbody>
 </table>
 {% endblock %}
