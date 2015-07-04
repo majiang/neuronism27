@@ -24,13 +24,13 @@
     <th>R bef</th>
     <th class="last-column">R aft</th>
   </tr></thead>
-  <tbody>{% for score in result %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+  <tbody>{% for score in result %}<tr{% if loop.last %} class="last-row"{% endif %}>
     <td class="last-column">{{ score.pid }}</td>
     <td class="last-column">{{ score.score }}</td>
     <td>{{ score.point }}</td>
-{% for p in score.point_summary %}    <td{% if forloop.last %} class="last-column"{% endif %}>{{ p }}</td>
+{% for p in score.point_summary %}    <td{% if loop.last %} class="last-column"{% endif %}>{{ p }}</td>
 {% endfor %}    <td>{{ score.rp_gain }}</td>
-{% for r in score.rank %}    <td{% if forloop.last %} class="last-column"{% endif %}>{{ r }}</td>
+{% for r in score.rank %}    <td{% if loop.last %} class="last-column"{% endif %}>{{ r }}</td>
 {% endfor %}    <td>{{ score.finish_date.strftime("%Y/%m/%d") }}</td>
     <td>{{ score.games }}</td>
     <td>{{ score.rating_bef|floatformat:2 }}</td>

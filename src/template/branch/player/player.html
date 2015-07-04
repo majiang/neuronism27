@@ -15,7 +15,7 @@
     <th>degree</th>
     <th class="last-column">achieve</th>
   </tr></thead>
-  <tbody>{% for player in players %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+  <tbody>{% for player in players %}<tr{% if loop.last %} class="last-row"{% endif %}>
     <td><a href="/branch/player?pid={{ player.pid }}">{{ player.pid }}</a></td>
     <td>{% if player.rated %}{{ player.curR|floatformat:2 }}{% endif %}</td>
     <td class="last-column">{{ player.last_visit.strftime("%Y/%m/%d") }}</td>

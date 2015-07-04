@@ -8,7 +8,7 @@ function drawgraph()
 {
     var data = google.visualization.arrayToDataTable([
       ['Played', 'Rating'],
-      {% for score in scores %}[{{ score.game_no }}, {{ score.R_aft }}], {% if forloop.last %}[{{ score.game_no|add:"-1" }}, {{ score.R_bef }}]{% endif %}{% endfor %}
+      {% for score in scores %}[{{ score.game_no }}, {{ score.R_aft }}], {% if loop.last %}[{{ score.game_no|add:"-1" }}, {{ score.R_bef }}]{% endif %}{% endfor %}
     ]);
     var options = {title: 'Rating Process of Player {{ bname }}-{{ pid }}'};
     var chart = new google.visualization.LineChart(document.getElementById('graph_area'));
@@ -26,10 +26,10 @@ function drawgraph()
 </dd><dt>min / current / max rating
 </dt><dd>R{{ whole_score.min_R|floatformat:2 }} / <strong>R{{ whole_score.curr_R|floatformat:2 }}</strong> / R{{ whole_score.max_R|floatformat:2 }}
 </dd><dt>rank distribution
-</dt><dd>{% for r in whole_score.rank_dist %}{{ r }}{% if not forloop.last %} - {% endif %}{% endfor %}
-</dd><dd>{% for r in whole_score.rank_perc %}{{ r }}%{% if not forloop.last %} - {% endif %}{% endfor %}
+</dt><dd>{% for r in whole_score.rank_dist %}{{ r }}{% if not loop.last %} - {% endif %}{% endfor %}
+</dd><dd>{% for r in whole_score.rank_perc %}{{ r }}%{% if not loop.last %} - {% endif %}{% endfor %}
 </dd><dt>point distribution
-</dt><dd>{% for p in whole_score.pdr %}{% if forloop.first or forloop.last %}<strong>{% endif %}{{ p }}{% if forloop.first %}</strong> sweeps{% endif %}{% if forloop.last %}</strong> flies{% else %} - {% endif %}{% endfor %}
+</dt><dd>{% for p in whole_score.pdr %}{% if loop.first or loop.last %}<strong>{% endif %}{{ p }}{% if loop.first %}</strong> sweeps{% endif %}{% if loop.last %}</strong> flies{% else %} - {% endif %}{% endfor %}
 </dd><dt>opponent rating
 </dt><dd>R{{ whole_score.av_oppR|floatformat:0 }} &#177; {{ whole_score.dev_oppR|floatformat:0 }}
 </dd><dt>average score
@@ -46,7 +46,7 @@ function drawgraph()
     <th>Date</th>
     <th class="last-column">Played</th>
   </tr></thead>
-  <tbody>{% for date_info in whole_score.date_dist %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+  <tbody>{% for date_info in whole_score.date_dist %}<tr{% if loop.last %} class="last-row"{% endif %}>
     <td style="font-weight: bold; color: #{{ date_info.color }}">{{ date_info.date }}</td>
     <td class="last-column">{{ date_info.played }}</td>
   </tr>{% endfor %}</tbody>
@@ -65,7 +65,7 @@ function drawgraph()
     <th>oppR</th>
     <th class="last-column">Perf</th>
   </tr></thead>
-  <tbody>{% for score in scores %}<tr{% if forloop.last %} class="last-row"{% endif %}>
+  <tbody>{% for score in scores %}<tr{% if loop.last %} class="last-row"{% endif %}>
     <td>{{ score.game_no }}</td>
     <td class="last-column">{{ score.game_date }}</td>
     <td>{{ score.rank }}</td>

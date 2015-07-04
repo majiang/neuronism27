@@ -32,7 +32,7 @@ function drawgraph()
     <th class="last-column">#G</th>
   </tr>
 </thead><tbody>{% for stat in games_stat %}
-  <tr{% if forloop.last %} class="last-row"{% endif %}>
+  <tr{% if loop.last %} class="last-row"{% endif %}>
     <td style="color: {{ stat.color }}; font-weight: bold;">{{ stat.date }}</td>
     <td class="last-column">{{ stat.games }}</td>
   </tr>{% endfor %}

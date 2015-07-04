@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block tbody %}{% for viewer in viewers %}
-		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+		{% if not loop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
 			<td>{{ viewer.user.nickname }}</td>
 			<td>{{ viewer.user.email }}</td>
 			<td>{{ viewer.branch_id }}</td>

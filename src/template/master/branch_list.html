@@ -16,7 +16,7 @@
 {% endblock %}
 
 {% block tbody %}{% for branch in branches %}
-		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+		{% if not loop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
 			<td><a href="/master/branch?bid={{ branch.bid }}">{{ branch.bid }}</td>
 			<td>{{ branch.name }}</td>
 			<td>{{ branch.games }}</td>

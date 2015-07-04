@@ -12,7 +12,7 @@
 
 {% block tbody %}
 {% for  in  %}
-		{% if not forloop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
+		{% if not loop.last %}<tr>{% else %}<tr class="last-row">{% endif %}
 <td>{{ . }}</td>
 		</tr>{% endfor %}
 {% endblock %}
