@@ -2,9 +2,9 @@
 {% block result %}success{% endblock %}
 {% block internal %}<p>Activation success:</p>
 <dl>
-	<dt>viewer ID</dt><dd>{{ viewer.key.id }}</dd>
-	<dt>viewer nickname</dt><dd>{{ viewer.user.nickname }}</dd>
-	<dt>viewer e-mail</dt><dd>{{ viewer.user.email }}</dd>
+	<dt>viewer ID</dt><dd>{{ viewer.key().id() }}</dd>
+	<dt>viewer nickname</dt><dd>{{ viewer.user.nickname() }}</dd>
+	<dt>viewer e-mail</dt><dd>{{ viewer.user.email() }}</dd>
 	<dt>branch id</dt><dd>{{ viewer.bid }}</dd>
 	<dt>player id</dt><dd>{{ viewer.pid }}</dd>
 </dl>
